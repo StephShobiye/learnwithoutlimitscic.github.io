@@ -1,4 +1,4 @@
-# Cymru ALN CIC Website – v1.0 (14 Aug 2025)
+# Learn without Limits Website – v1.0 (14 Aug 2025)
 
 This package contains README + LICENSE for the segmented deployment.
 
