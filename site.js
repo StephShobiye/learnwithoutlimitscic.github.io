@@ -1,14 +1,18 @@
 
 (function(){
-const live=document.createElement('div'); live.className='visually-hidden'; live.setAttribute('aria-live','polite'); document.body.appendChild(live);
-function announce(m){ live.textContent=m; }
-function setMode(c,on){ document.documentElement.classList.toggle(c,on); }
-function bumpText(d){ const h=document.documentElement; if(d>0){h.classList.remove('large-text');h.classList.add('xlarge-text');} if(d===0){h.classList.remove('xlarge-text');h.classList.add('large-text');} if(d<0){h.classList.remove('large-text','xlarge-text');}}
-document.getElementById('contrastToggle')?.addEventListener('click',()=>{const on=!document.documentElement.classList.contains('high-contrast');setMode('high-contrast',on);announce(on?'High contrast on':'High contrast off');});
-document.getElementById('dyslexiaToggle')?.addEventListener('click',()=>{const on=!document.documentElement.classList.contains('dyslexia');setMode('dyslexia',on);announce(on?'Dyslexia font on':'Dyslexia font off');});
-document.getElementById('textInc')?.addEventListener('click',()=>bumpText(1));
-document.getElementById('textDec')?.addEventListener('click',()=>bumpText(-1));
-let speaking=false,utter; function textSelectionOrMain(){const sel=window.getSelection()?.toString().trim(); if(sel) return sel; const main=document.getElementById('main')||document.body; return (main.innerText||'').trim().slice(0,15000);}
-document.getElementById('readerBtn')?.addEventListener('click',(e)=>{ if(!('speechSynthesis' in window)){ alert('Text reader not supported'); return; } if(!speaking){ utter=new SpeechSynthesisUtterance(textSelectionOrMain()); utter.lang=document.documentElement.lang||'en'; utter.onend=()=>{speaking=false; e.currentTarget.setAttribute('aria-pressed','false');}; speaking=true; e.currentTarget.setAttribute('aria-pressed','true'); speechSynthesis.speak(utter);} else { speechSynthesis.cancel(); speaking=false; e.currentTarget.setAttribute('aria-pressed','false'); } });
-window.renderBlogger=function(id,limit){ fetch('https://cymrualn.blogspot.com/feeds/posts/default?alt=json').then(r=>r.json()).then(data=>{ const posts=(data.feed&&data.feed.entry)?data.feed.entry.slice(0,limit||6):[]; const wrap=document.getElementById(id); if(!wrap)return; if(!posts.length){wrap.textContent='No posts to show right now.'; return;} posts.forEach(p=>{ const title=(p.title&&p.title.$t)||'Untitled'; const link=(p.link||[]).find(l=>l.rel==='alternate')?.href||'#'; const snippet=(p.content&&p.content.$t)?p.content.$t.replace(/<[^>]+>/g,'').slice(0,180)+'…':''; const card=document.createElement('article'); card.className='card'; card.innerHTML=`<h3><a href="${link}">${title}</a></h3><p>${snippet}</p>`; wrap.appendChild(card); }); }).catch(()=>{ const wrap=document.getElementById(id); if(wrap) wrap.textContent='Unable to load archive right now.'; }); }
+  const $=s=>document.querySelector(s), html=document.documentElement;
+  let size=100;
+  $('#incText')?.addEventListener('click',()=>{ size=Math.min(150,size+10); html.style.fontSize=size+'%'; });
+  $('#decText')?.addEventListener('click',()=>{ size=Math.max(90,size-10); html.style.fontSize=size+'%'; });
+  $('#toggleHC')?.addEventListener('click',()=>{ document.body.classList.toggle('hc'); });
+  $('#toggleDys')?.addEventListener('click',()=>{
+    const on=document.body.dataset.dys==='1';
+    document.body.dataset.dys= on ? '0':'1';
+    document.body.style.fontFamily = on ? '' : "OpenDyslexic, Atkinson Hyperlegible, Arial, Verdana, sans-serif";
+  });
+  $('#readPage')?.addEventListener('click',()=>{
+    const s=window.speechSynthesis; if(!s){ alert('Speech not supported.'); return; }
+    s.cancel(); const t=document.getElementById('main')?.innerText||document.body.innerText;
+    const u=new SpeechSynthesisUtterance(t); u.lang=document.documentElement.lang||'en-GB'; s.speak(u);
+  });
 })();
