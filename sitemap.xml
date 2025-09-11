@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://learnwithoutlimitscic.org/en/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learnwithoutlimitscic.org/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="cy" href="https://learnwithoutlimitscic.org/cy/index.html"/>
-  </url>
-  <url>
-    <loc>https://learnwithoutlimitscic.org/cy/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://learnwithoutlimitscic.org/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="cy" href="https://learnwithoutlimitscic.org/cy/index.html"/>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://learnwithoutlimitscic.org/</loc></url>
+<url><loc>https://learnwithoutlimitscic.org/en/</loc></url>
+<url><loc>https://learnwithoutlimitscic.org/cy/</loc></url>
+<url><loc>https://learnwithoutlimitscic.org/en/app.html</loc></url>
+<url><loc>https://learnwithoutlimitscic.org/cy/ap.html</loc></url>
 </urlset>
