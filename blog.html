@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Stephanie Shobiye">
+  <meta property="article:author" content="Stephanie Shobiye">
+  <title>Blog | Learn Without Limits CIC</title>
+  <link rel="stylesheet" href="/en/assets/css/site.css">
+  <link rel="alternate" href="/cy/blog.html" hreflang="cy">
+  <link rel="alternate" href="/en/index.html" hreflang="en">
+  <link rel="icon" href="/en/assets/img/logo-circle.png">
+
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <a class="visually-hidden" href="#main">Skip to content</a>
+  <div class="container nav" aria-label="Primary">
+    <div class="left">
+      <a href="/en/index.html" aria-label="Home">
+        <img class="logo" src="/en/assets/img/logo-circle.png" alt="Learn Without Limits CIC — circle logo (founded by Stephanie Shobiye)">
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="cluster" role="list">
+          <li><a href="/en/app.html">App</a></li>
+          <li><a href="/en/events.html">Events</a></li>
+          <li><a href="/en/blog.html">Blog</a></li>
+          <li><a href="/en/projects.html">Projects</a></li>
+          <li><a href="/en/about.html">About</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="center">
+      <a class="btn btn-primary" href="/en/donate.html">Buy us a coffee!</a>
+    </div>
+    <div class="right">
+      <a class="btn btn-ghost" href="/cy/index.html">CY / EN</a>
+      <button class="btn btn-ghost" id="readerBtn" aria-pressed="false" aria-label="Text reader">🔊</button>
+      <div class="cluster" role="group" aria-label="Accessibility options">
+        <button class="btn btn-ghost" id="contrastToggle">High contrast</button>
+        <button class="btn btn-ghost" id="dyslexiaToggle">Dyslexia font</button>
+        <button class="btn btn-ghost" id="textInc">A+</button>
+        <button class="btn btn-ghost" id="textDec">A−</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container stack" tabindex="-1">
+
+<section class="stack">
+  <h2>Latest from our blog</h2>
+  <article class="card">
+    <h3><a href="/en/posts/2025-09-09-relaunch.html">Why we’re relaunching the site (and what’s next)</a></h3>
+    <p>We’ve rebuilt our website to make it faster, clearer, and more accessible…</p>
+  </article>
+  <h2>Historic posts (Blogger)</h2>
+  <div id="bloggerFeed" class="stack" aria-live="polite"></div>
+</section>
+<script>window.renderBlogger && renderBlogger('bloggerFeed', 6);</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container cluster">
+    <span>&copy; <span id="y"></span> Learn Without Limits CIC</span> <span>· Founded by Stephanie Shobiye</span>
+    <a href="https://www.facebook.com/groups/learnwithoutlimitscic/" aria-label="Facebook group">Facebook</a>
+    <a href="https://www.linkedin.com/in/steph-shobiye/" aria-label="LinkedIn (Stephanie Shobiye)">LinkedIn</a>
+    <a href="https://www.youtube.com/playlist?list=PLFS6x_8ej1Z1mZ3bpRTNleyUYh4l19vGE&jct=GYlro42oQDCmxNVtyY6DoQ" aria-label="YouTube playlist (ALN Code)">YouTube</a>
+    <a href="/en/privacy.html">Privacy</a>
+    <a href="/en/safeguarding.html">Safeguarding</a>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</footer>
+<script src="/en/assets/js/site.js" defer></script>
+
+</body>
+</html>
