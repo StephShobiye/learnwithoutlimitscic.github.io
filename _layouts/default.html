@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/accessibility.css">
+  <link rel="stylesheet" href="/assets/css/brand.css">
+  <link rel="stylesheet" href="/assets/css/badges.css">
+  <link rel="icon" type="image/png" href="/assets/img/LearnWithoutLimits_Badge.png" sizes="any">
+  {% seo %}
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+{% include header-logo.html %}
+<main id="main">
+  {{ content }}
+</main>
+<footer>
+  <p>&copy; 2025 Learn Without Limits CIC</p>
+</footer>
+</body>
+</html>
