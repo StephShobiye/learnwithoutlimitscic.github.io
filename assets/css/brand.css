@@ -1,0 +1,3 @@
+.site-header { display:flex; align-items:center; gap:1rem; padding:1rem 0; }
+.site-header .brand img { max-width: 20vw; height:auto; width:128px; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
