@@ -49,3 +49,19 @@ html.hc .card, html.hc .hero{background:#111;color:#fff}
 @media (prefers-reduced-motion: reduce){
   *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
 }
+/* --- LWL Header Branding --- */
+.site-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.site-header .brand img {
+  height: 64px;
+  width: auto;
+  display: block;
+}
+@media (max-width: 640px) {
+  .site-header .brand img {
+    height: 48px;
+  }
+}
