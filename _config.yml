@@ -1,0 +1,6 @@
+title: Learn Without Limits CIC
+url: https://learnwithoutlimitscic.org
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
