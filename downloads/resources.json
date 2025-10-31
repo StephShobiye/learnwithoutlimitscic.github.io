@@ -1,0 +1,23 @@
+{
+  "resources": [
+    {
+      "title": "Beginner Crochet – Granny Square Christmas Stocking",
+      "date": "2025-10-31",
+      "files": [
+        {"label": "DOCX", "url": "/downloads/Beginner_Crochet__Granny_Square_Christmas_Stocking_LWL.docx"}
+      ],
+      "tags": ["Christmas", "Craft", "Beginner"],
+      "lang": "en"
+    },
+    {
+      "title": "Daniel & Marc’s Christmas Sweet Treat Collection",
+      "date": "2025-10-31",
+      "files": [
+        {"label": "PDF", "url": "/downloads/Daniel & Marc’s Christmas Sweet Treat Collection for Learn Without Limits CIC.pdf"},
+        {"label": "DOCX", "url": "/downloads/Daniel & Marc’s Christmas Sweet Treat Collection for Learn Without Limits CIC (1).docx"}
+      ],
+      "tags": ["Christmas", "Food", "Family"],
+      "lang": "en"
+    }
+  ]
+}
