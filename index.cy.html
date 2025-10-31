@@ -1,10 +1,109 @@
----
-layout: default
-title: Hafan
-lang: cy
----
+<!doctype html>
+<html lang="cy">
+<head><link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#1b73e8">
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+  }
+</script>
 
-<section aria-labelledby="croeso">
-  <h1 id="croeso">Croeso i Learn Without Limits CIC</h1>
-  <p>Cefnogaeth i deuluoedd a gweithwyr proffesiynol ledled Cymru. Archwiliwch ein Ap a’n hadnoddau.</p>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn Without Limits CIC | Awtistiaeth, ADY a Chynhwysiant yng Nghymru</title>
+  <meta name="description" content="Cefnogaeth dan arweiniad rhieni i deuluoedd ADY yng Nghymru.">
+  <link rel="preload" href="/assets/css/styles.css" as="style">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="alternate" href="/index.en.html" hreflang="en">
+  <link rel="icon" href="/assets/img/favicon.ico">
+</head>
+<body>
+  <a class="skip-link" href="#main">Neidio i'r cynnwys</a>
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <img src="/assets/img/Logo_FullColour.png" alt="Logo Learn Without Limits CIC" onerror="this.style.display='none'">
+      <div class="brand-text">
+        <span class="brand-title">Learn Without Limits CIC</span>
+        <span class="brand-tag">Cefnogaeth dan arweiniad rhieni i deuluoedd ADY yng Nghymru.</span>
+      </div>
+    </div>
+    <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="nav">Dewislen</button>
+    <nav id="nav" class="site-nav" aria-label="Prif lywio">
+      <ul>
+        <li><a href="/index.cy.html">Hafan</a></li>
+        <li><a href="/about.cy.html">Amdanom ni</a></li>
+        <li><a href="/app.cy.html">Ap Canllaw Rhieni</a></li>
+        <li><a href="/events.cy.html">Digwyddiadau</a></li>
+        <li><a href="/contact.cy.html">Cyswllt</a></li>
+      </ul>
+    </nav>
+    <nav class="lang-switch" aria-label="Newid iaith">
+      <a class="btn ghost" href="/index.en.html" lang="en" hreflang="en" aria-label="Switch language to English">English</a>
+    </nav>
+  </header>
+  <div class="a11y-controls" role="region" aria-label="Rheolaethau hygyrchedd">
+    <button class="btn" data-action="tts">Darllen y dudalen</button>
+    <button class="btn" data-action="fontsize">Maint testun</button>
+    <button class="btn" data-action="contrast">Cyferbyniad uchel</button>
+    <button class="btn" data-action="pause-anim">Lleihau symudiad</button>
+  </div>
+  <main id="main" tabindex="-1">
+
+<section class="hero">
+  <h1>Learn Without Limits CIC</h1>
+  <p class="lead">Cefnogaeth dan arweiniad rhieni i deuluoedd ADY yng Nghymru.</p>
+  <div class="hero-actions">
+    <a class="btn primary" href="/app.cy.html">Lawrlwytho’r Ap Canllaw Rhieni</a>
+    <a class="btn" href="/events.cy.html">Gweld digwyddiadau sydd ar ddod</a>
+    <a class="btn ghost" href="https://www.facebook.com/groups/learnwithoutlimitscic" target="_blank" rel="noopener">Ymunwch â ni ar Facebook</a>
+  </div>
 </section>
+
+<section class="grid two">
+  <article class="card">
+    <h2>Ein Gweledigaeth</h2>
+    <p>Bydd Cymru yn y lle gorau i dyfu i fyny os ydych yn awtistig, ag ADHD, neu’n anabl — oherwydd gall teuluoedd gael mynediad at ganllawiau clir, penderfyniadau teg, a chymuned gref.</p>
+  </article>
+  <article class="card">
+    <h2>Beth rydym yn ei wneud</h2>
+    <ul>
+      <li>Canllawiau ymarferol ar Ddeddf ADY a Chynlluniau Datblygu Unigol (CDU)</li>
+      <li>Templedi a llythyrau ymarferol y gallwch eu defnyddio heddiw</li>
+      <li>Cefnogaeth gan gymheiriaid a mentora profiadol</li>
+      <li>Digwyddiadau: Holi ac Ateb ar-lein a chyfarfodydd lleol</li>
+    </ul>
+  </article>
+</section>
+
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div>
+        <h3>Cyswllt</h3>
+        <ul>
+          <li><a href="mailto:support@learnwithoutlimitscic.org">support@learnwithoutlimitscic.org</a></li>
+          <li><a href="https://www.facebook.com/groups/learnwithoutlimitscic" rel="noopener" target="_blank">Grŵp Facebook</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Dolenni cyflym</h3>
+        <ul>
+          <li><a href="/app.cy.html">Lawrlwytho’r Ap</a></li>
+          <li><a href="/events.cy.html">Digwyddiadau</a></li>
+          <li><a href="/about.cy.html">Amdanom ni</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Cefnogwch ni</h3>
+        <p>Cefnogwch ni: ar gael yn fuan (Hydref).</p>
+      </div>
+    </div>
+    <div class="legal">
+      <a href="/privacy.cy.html">Preifatrwydd a Diogelu</a>
+      <span aria-hidden="true"> · </span>
+      <span>&copy; 2025 Learn Without Limits CIC</span>
+    </div>
+  </footer>
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>
