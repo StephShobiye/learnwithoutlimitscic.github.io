@@ -1,0 +1,6 @@
+.badge-new {
+  display:inline-block; font-size:.8rem; font-weight:700; line-height:1;
+  padding:.3rem .45rem; border-radius:.5rem; border:2px solid var(--brand,#B4002D);
+  color:#fff; background:var(--brand,#B4002D); margin-left:.5rem;
+}
+@media (prefers-contrast: more) { .badge-new { border-width:3px; } }
