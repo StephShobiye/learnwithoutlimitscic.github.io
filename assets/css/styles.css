@@ -31,8 +31,11 @@ a:focus,button:focus{outline:3px solid var(--focus);outline-offset:2px}
 .content{padding:1rem;max-width:75ch;margin-inline:auto}
 
 .content.wide{
-  max-width:none;
+  max-width:1100px;
+  width:100%;
+  margin-inline:auto;
 }
+
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
 .form{display:grid;gap:.5rem;max-width:60ch}
 .form input,.form textarea{padding:.6rem;border-radius:.6rem;border:1px solid #bbb}
