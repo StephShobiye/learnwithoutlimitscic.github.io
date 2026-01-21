@@ -1,189 +1,156 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Learn Without Limits CIC | Parent-led support for ALN families in Wales</title>
-  <meta name="description" content="Parent-led support for ALN families in Wales. Practical guidance on ALN, IDPs, EOTAS, EBSA, EHE, and school or college inclusion, plus events and resources.">
-  <link rel="stylesheet" href="/assets/css/site.css">
+  <title>About | Learn Without Limits CIC</title>
+  <meta name="description" content="Learn Without Limits CIC supports children, young people and young adults with Additional Learning Needs and disabilities in Wales through practical guidance, digital tools and community support.">
 
-  <style>
-    /* Home page layout tweaks only (keeps site structure intact) */
-    .home-wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
-    .home-hero { margin-top: 18px; margin-bottom: 18px; }
-    .home-hero h1 { margin-bottom: 8px; }
-    .home-hero p { max-width: 70ch; }
-
-    .home-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 16px 0 18px;
-      align-items: center;
-    }
-    .home-cta-row a {
-      display: inline-block;
-      text-decoration: none;
-      padding: 10px 14px;
-      border-radius: 10px;
-      border: 2px solid #1b1b1b;
-      font-weight: 600;
-    }
-    .home-cta-primary {
-      background: #1b1b1b;
-      color: #fff;
-      border-color: #1b1b1b;
-    }
-    .home-cta-secondary {
-      background: #fff;
-      color: #1b1b1b;
-    }
-
-    .home-image-row {
-      display: flex;
-      gap: 12px;
-      margin: 10px 0 26px;
-    }
-    .home-image {
-      flex: 1 1 0;
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid rgba(0,0,0,0.12);
-      background: #f7f7f7;
-    }
-    .home-image img {
-      width: 100%;
-      height: 220px;          /* keeps the row tidy on desktop */
-      object-fit: cover;      /* prevents stretching */
-      display: block;
-    }
-    .home-image figcaption {
-      padding: 10px 12px;
-      font-size: 0.95rem;
-      line-height: 1.35;
-    }
-
-    @media (max-width: 900px) {
-      .home-image-row { flex-direction: column; }
-      .home-image img { height: 200px; }
-    }
-
-    .home-section { margin: 28px 0; }
-    .home-section h2 { margin-bottom: 10px; }
-    .home-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 10px;
-    }
-    .home-card {
-      border: 1px solid rgba(0,0,0,0.12);
-      border-radius: 14px;
-      padding: 14px;
-      background: #fff;
-    }
-    .home-card h3 { margin-top: 0; margin-bottom: 8px; }
-    .home-card p { margin: 0 0 10px; }
-    .home-card a { font-weight: 600; }
-
-    @media (max-width: 900px) {
-      .home-grid { grid-template-columns: 1fr; }
-    }
-  </style>
-
-  <script defer src="/assets/js/site.js"></script>
+  <link rel="preload" href="/assets/css/styles.css" as="style">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="alternate" href="/index.cy.html" hreflang="cy">
+  <link rel="icon" href="/assets/img/favicon.ico">
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-
-  <!-- Keep existing site structure and navigation -->
-  {% include header-logo.html %}
-
-  <main id="main" class="home-wrap">
-    <section class="home-hero" aria-labelledby="home-title">
-      <h1 id="home-title">Learn Without Limits CIC</h1>
-      <p>
-        Parent-led support for ALN families in Wales, grounded in lived experience.
-        We support families of children and young people navigating ALN, IDPs, EOTAS, EBSA and school inclusion.
-      </p>
-
-      <div class="home-cta-row" aria-label="Primary actions">
-        <a class="home-cta-primary" href="/parent-guide-app.en.html">Download the Parent Guide App</a>
-        <a class="home-cta-secondary" href="/events.en.html">See upcoming events</a>
-        <a class="home-cta-secondary" href="https://www.eventbrite.co.uk/o/learn-without-limits-cic-00000000000" target="_blank" rel="noopener">View our Eventbrite</a>
-        <a class="home-cta-secondary" href="https://learnwithoutlimitscic.blogspot.com/" target="_blank" rel="noopener">Read the Blog</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <img src="/assets/img/Logo_FullColour.png" alt="Learn Without Limits CIC logo" onerror="this.style.display='none'">
+      <div class="brand-text">
+        <span class="brand-title">Learn Without Limits CIC</span>
+        <span class="brand-tag">Parent-led support for ALN families in Wales.</span>
       </div>
+    </div>
+    <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/index.en.html">Home</a></li>
+        <li><a href="/about.en.html">About</a></li>
+        <li><a href="/app.en.html">Parent Guide App</a></li>
+        <li><a href="/events.en.html">Events</a></li>
+        <li><a href="/contact.en.html">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="lang-switch" aria-label="Language switch">
+      <a class="btn ghost" href="/index.cy.html" lang="cy" hreflang="cy" aria-label="Switch language to Cymraeg">Cymraeg</a>
+    </nav>
+  </header>
+  <div class="a11y-controls" role="region" aria-label="Accessibility controls">
+    <button class="btn" data-action="tts">Read this page</button>
+    <button class="btn" data-action="fontsize">Text size</button>
+    <button class="btn" data-action="contrast">High contrast</button>
+    <button class="btn" data-action="pause-anim">Reduce motion</button>
+  </div>
+  <main id="main" tabindex="-1">
 
-      <!-- 3-image row directly under main heading, dragon in centre -->
-      <div class="home-image-row" aria-label="Highlights">
-        <figure class="home-image">
-          <img src="/assets/img/home-peer-left.jpg" alt="Parents and carers sitting together in a calm peer support discussion">
-          <figcaption>Peer support that is calm, practical and grounded in what families actually face.</figcaption>
-        </figure>
+<section class="content wide">
 
-        <figure class="home-image">
-          <img src="/assets/img/home-dragon-centre.png" alt="Child riding a red dragon over a Welsh landscape, symbolising hope and support for families in Wales">
-          <figcaption>Hope, persistence and Welsh pride, for families who have had to fight too hard for support.</figcaption>
-        </figure>
+  <h1>About Learn Without Limits CIC</h1>
 
-        <figure class="home-image">
-          <img src="/assets/img/home-peer-right.jpg" alt="Families sharing experiences in an informal parent support group">
-          <figcaption>Shared experience, clear options, and a route forward when you feel stuck.</figcaption>
-        </figure>
-      </div>
-    </section>
+  <p>
+    <strong>Learn Without Limits CIC</strong> is a Wales-based, parent-led Community Interest Company supporting
+    children, young people and young adults with Additional Learning Needs (ALN), disabilities, and related
+    education and health challenges.
+  </p>
 
-    <section class="home-section" aria-labelledby="what-we-do">
-      <h2 id="what-we-do">What we do</h2>
-      <p>
-        We focus on prevention and early support, so families can understand options and reduce escalation.
-        This includes families dealing with attendance pressure, school-related anxiety, and emotionally based school avoidance (EBSA).
-      </p>
-      <p>
-        We provide practical guidance, clear wording you can reuse, and signposting to help you prepare for meetings, understand your rights, and keep your child safe.
-      </p>
-    </section>
+  <p>
+    We help families navigate complex systems such as education, health, and social care by providing clear,
+    practical information, guidance and signposting. Our focus is on early understanding and prevention —
+    supporting families before issues escalate into crisis.
+  </p>
 
-    <section class="home-section" aria-labelledby="start-here">
-      <h2 id="start-here">Start here</h2>
+  <p>
+    Our work is grounded in lived experience and informed by public guidance, evidence, and an understanding
+    of how systems operate in practice. We recognise that many families feel overwhelmed, unheard, or unsure
+    where to turn, and we aim to provide clarity, reassurance, and practical next steps.
+  </p>
 
-      <div class="home-grid">
-        <div class="home-card">
-          <h3>New here?</h3>
-          <p>Find out who we are, how we work, and what we can and cannot do.</p>
-          <a href="/about.en.html">Go to About</a>
-        </div>
+    
+<h2>Governance, safeguarding and policies</h2>
 
-        <div class="home-card">
-          <h3>Need support this month?</h3>
-          <p>See our upcoming events and workshops, including parent Q&amp;A sessions.</p>
-          <a href="/events.en.html">Go to Events</a>
-        </div>
+<p>
+  Learn Without Limits CIC is committed to strong governance, safeguarding, transparency, and ethical practice.
+  As a Community Interest Company, we operate with a clear public benefit purpose and recognise the responsibility
+  that comes with supporting children, young people and young adults, particularly those who may be vulnerable
+  or navigating complex systems.
+</p>
 
-        <div class="home-card">
-          <h3>Prefer to read quietly?</h3>
-          <p>Our blog is where we publish longer, practical guides and lived-experience pieces.</p>
-          <a href="https://learnwithoutlimitscic.blogspot.com/" target="_blank" rel="noopener">Go to Blog</a>
-        </div>
-      </div>
-    </section>
+<h3>Safeguarding</h3>
+<p>
+  Safeguarding is a core priority across all our activities. We have clear safeguarding arrangements in place
+  and expect anyone working with or representing Learn Without Limits CIC, including volunteers, to follow them.
+  <a href="/policies/lwl-safeguarding-policy.pdf">Read our Safeguarding Policy (PDF)</a>.
+</p>
 
-    <section class="home-section" aria-labelledby="footer-note">
-      <h2 id="footer-note">A quick note</h2>
-      <p>
-        We are building a digital parent guide app and a structured knowledge base so support is not dependent on who happens to be online.
-        This work is being developed alongside our events and community activity.
-      </p>
-    </section>
+<h3>Privacy and data protection</h3>
+<p>
+  We take privacy and data protection seriously and are committed to handling personal data responsibly,
+  proportionately, and transparently.
+  <a href="/policies/lwl-privacy-and-data-protection-policy.pdf">Read our Privacy &amp; Data Protection Policy (PDF)</a>.
+</p>
+
+<h3>Information and professional boundaries</h3>
+<p>
+  We provide information, guidance and signposting, but we are not a legal, medical, or clinical service.
+  We are clear about our role and professional boundaries to ensure ethical practice and protect families.
+  <a href="/policies/lwl-information-and-professional-boundaries-statement.pdf">
+    Read our Information and Professional Boundaries Statement (PDF)
+  </a>.
+</p>
+
+<h3>Equality, diversity and inclusion</h3>
+<p>
+  Learn Without Limits CIC is a disability-led, community-rooted organisation. Inclusion is embedded across our
+  leadership, decision-making, and service design.
+  <a href="/policies/lwl-edi-statement.pdf">Read our Equality, Diversity and Inclusion Statement (PDF)</a>.
+</p>
+
+<h3>Concerns and complaints</h3>
+<p>
+  We are committed to handling concerns, complaints, and feedback fairly, respectfully, and transparently.
+  <a href="/policies/lwl-complaints-and-concerns-policy.pdf">
+    Read our Complaints &amp; Concerns Policy (PDF)
+  </a>.
+</p>
+
+<p>
+  Our wider learning, participation and ethical approach to volunteering is shared openly through our blog,
+  which forms part of our wider support ecosystem:
+  <a href="https://learnwithoutlimitscic.blogspot.com/2026/01/the-changing-landscape-of-volunteering.html">
+    The changing landscape of volunteering
+  </a>.
+</p>
+</section>
+
   </main>
-
-  {% include footer.html %}
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:support@learnwithoutlimitscic.org">support@learnwithoutlimitscic.org</a></li>
+          <li><a href="https://www.facebook.com/groups/learnwithoutlimitscic" rel="noopener" target="_blank">Facebook group</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="/app.en.html">Download the App</a></li>
+          <li><a href="/events.en.html">Events</a></li>
+          <li><a href="/about.en.html">About us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Support us</h3>
+        <p>Support us: coming soon (October).</p>
+      </div>
+    </div>
+    <div class="legal">
+      <a href="/privacy.en.html">Privacy & Safeguarding</a>
+      <span aria-hidden="true"> · </span>
+      <span>&copy; 2025 Learn Without Limits CIC</span>
+    </div>
+  </footer>
+  <script src="/assets/js/site.js" defer></script>
 </body>
 </html>
-
-  .
-
-
-
