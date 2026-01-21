@@ -1,185 +1,188 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Learn Without Limits CIC | Parent-led support for ALN families in Wales</title>
-  <meta name="description" content="Parent-led support for ALN families in Wales. Practical guidance on ALN, IDPs, EOTAS, EBSA and school inclusion, plus events and resources.">
-  <link rel="stylesheet" href="/assets/css/site.css">
+---
+layout: default
+title: Learn Without Limits CIC
+lang: en
+description: Parent-led support for ALN families in Wales. Practical guidance for ALN, IDPs, EOTAS, EBSA, EHE and school/college inclusion.
+---
 
-  <style>
-    /* Home page layout tweaks only (keeps site structure intact) */
-    .home-wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
-    .home-hero { margin-top: 18px; margin-bottom: 18px; }
-    .home-hero h1 { margin-bottom: 8px; }
-    .home-hero p { max-width: 70ch; }
+<main id="main" class="page-content">
 
-    .home-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 16px 0 18px;
-      align-items: center;
-    }
-    .home-cta-row a {
-      display: inline-block;
-      text-decoration: none;
-      padding: 10px 14px;
-      border-radius: 10px;
-      border: 2px solid #1b1b1b;
-      font-weight: 600;
-    }
-    .home-cta-primary {
-      background: #1b1b1b;
-      color: #fff;
-      border-color: #1b1b1b;
-    }
-    .home-cta-secondary {
-      background: #fff;
-      color: #1b1b1b;
-    }
+  <section class="hero">
+    <h1>Learn Without Limits CIC</h1>
 
-    .home-image-row {
-      display: flex;
-      gap: 12px;
-      margin: 10px 0 26px;
-    }
-    .home-image {
-      flex: 1 1 0;
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid rgba(0,0,0,0.12);
-      background: #f7f7f7;
-    }
-    .home-image img {
-      width: 100%;
-      height: 220px;          /* keeps the row tidy on desktop */
-      object-fit: cover;      /* prevents stretching */
-      display: block;
-    }
-    .home-image figcaption {
-      padding: 10px 12px;
-      font-size: 0.95rem;
-      line-height: 1.35;
-    }
+    <p class="lead">
+      Parent-led support for ALN families in Wales, grounded in the lived experience of parents and young adults.
+      We support families of children and young people navigating ALN, IDPs, EOTAS, EBSA, EHE, and school/college inclusion.
+    </p>
 
-    @media (max-width: 900px) {
-      .home-image-row { flex-direction: column; }
-      .home-image img { height: 200px; }
-    }
+    <div class="hero-actions" role="navigation" aria-label="Primary actions">
+      <a class="btn btn-primary" href="parent-guide-app.en.html">Download the Parent Guide App</a>
+      <a class="btn btn-secondary" href="events.en.html">See upcoming events</a>
+      <a class="btn btn-secondary" href="https://www.eventbrite.com/o/learn-without-limits-cic-116012434951#events">View our Eventbrite</a>
+      <a class="btn btn-secondary" href="https://learnwithoutlimitscic.blogspot.com/">Read the Blog</a>
+      <a class="btn btn-secondary" href="about.en.html">Learn more about our work</a>
+    </div>
+  </section>
 
-    .home-section { margin: 28px 0; }
-    .home-section h2 { margin-bottom: 10px; }
-    .home-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 10px;
-    }
-    .home-card {
-      border: 1px solid rgba(0,0,0,0.12);
-      border-radius: 14px;
-      padding: 14px;
-      background: #fff;
-    }
-    .home-card h3 { margin-top: 0; margin-bottom: 8px; }
-    .home-card p { margin: 0 0 10px; }
-    .home-card a { font-weight: 600; }
+  <!-- 3-image row directly under the main heading area -->
+  <section class="home-image-row" aria-label="Learn Without Limits in action">
+    <figure class="home-card">
+      <img
+        src="assets/img/home-peer-left.jpg"
+        alt="Parents and carers sitting together in a calm peer support discussion."
+        loading="lazy"
+        width="1200"
+        height="800"
+      />
+      <figcaption>Peer support that is calm, practical, and grounded in what families actually face.</figcaption>
+    </figure>
 
-    @media (max-width: 900px) {
-      .home-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+    <figure class="home-card home-card-centre">
+      <img
+        src="assets/img/home-dragon-centre.png"
+        alt="A child riding a red dragon across a Welsh landscape, symbolising hope and support for families in Wales."
+        loading="lazy"
+        width="1200"
+        height="800"
+      />
+      <figcaption>Hope, persistence, and Welsh pride, for families who have had to fight too hard for support.</figcaption>
+    </figure>
 
-  <script defer src="/assets/js/site.js"></script>
-</head>
+    <figure class="home-card">
+      <img
+        src="assets/img/home-peer-right.jpg"
+        alt="Families sharing experiences in an informal parent support group."
+        loading="lazy"
+        width="1200"
+        height="800"
+      />
+      <figcaption>Shared experience, clear information, and a route forward when you feel stuck.</figcaption>
+    </figure>
+  </section>
 
-<body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+  <section class="content-block">
+    <h2>What we do</h2>
 
-  <!-- Keep existing site structure and navigation -->
-  {% include header-logo.html %}
+    <p>
+      We focus on prevention and early support, so families can understand options and reduce escalation.
+      This includes families dealing with attendance pressure, school-related anxiety, and emotionally based school avoidance (EBSA).
+      It also includes Elective Home Educators seeking information about how to re-enter the system to attend FE College, Training or Higher Education routes, and every permutation in between.
+    </p>
 
-  <main id="main" class="home-wrap">
-    <section class="home-hero" aria-labelledby="home-title">
-      <h1 id="home-title">Learn Without Limits CIC</h1>
-      <p>
-        Parent-led support for ALN families in Wales, grounded in lived experience.
-        We support families of children and young people navigating ALN, IDPs, EOTAS, EBSA and school inclusion.
-      </p>
+    <ul>
+      <li><strong>Plain-English guidance</strong> on ALN processes, IDPs, reviews and next steps.</li>
+      <li><strong>Practical tools</strong> we are building toolkits to include checklists, templates and copy-and-paste wording.</li>
+      <li><strong>Events and workshops</strong> designed to be welcoming and accessible.</li>
+      <li><strong>A digital Parent Guide App</strong> we are building to make support easier to access across Wales.</li>
+    </ul>
+  </section>
 
-      <div class="home-cta-row" aria-label="Primary actions">
-        <a class="home-cta-primary" href="/parent-guide-app.en.html">Download the Parent Guide App</a>
-        <a class="home-cta-secondary" href="/events.en.html">See upcoming events</a>
-        <a class="home-cta-secondary" href="https://www.eventbrite.co.uk/o/learn-without-limits-cic-00000000000" target="_blank" rel="noopener">View our Eventbrite</a>
-        <a class="home-cta-secondary" href="https://learnwithoutlimitscic.blogspot.com/" target="_blank" rel="noopener">Read the Blog</a>
-      </div>
+  <section class="content-block">
+    <h2>Start here</h2>
 
-      <!-- 3-image row directly under main heading, dragon in centre -->
-      <div class="home-image-row" aria-label="Highlights">
-        <figure class="home-image">
-          <img src="/assets/img/home-peer-left.jpg" alt="Parents and carers sitting together in a calm peer support discussion">
-          <figcaption>Peer support that is calm, practical and grounded in what families actually face.</figcaption>
-        </figure>
+    <div class="start-here-grid" role="navigation" aria-label="Start here">
+      <a class="start-here-card" href="about.en.html">
+        <h3>About our work</h3>
+        <p>What we do, why we exist, and how we are building practical support across Wales.</p>
+      </a>
 
-        <figure class="home-image">
-          <img src="/assets/img/home-dragon-centre.png" alt="Child riding a red dragon over a Welsh landscape, symbolising hope and support for families in Wales">
-          <figcaption>Hope, persistence and Welsh pride, for families who have had to fight too hard for support.</figcaption>
-        </figure>
+      <a class="start-here-card" href="events.en.html">
+        <h3>Events</h3>
+        <p>See what is coming up, including online sessions and local meet-ups.</p>
+      </a>
 
-        <figure class="home-image">
-          <img src="/assets/img/home-peer-right.jpg" alt="Families sharing experiences in an informal parent support group">
-          <figcaption>Shared experience, clear options, and a route forward when you feel stuck.</figcaption>
-        </figure>
-      </div>
-    </section>
+      <a class="start-here-card" href="https://learnwithoutlimitscic.blogspot.com/">
+        <h3>Blog</h3>
+        <p>Articles and guides written for parents, carers and supporters.</p>
+      </a>
 
-    <section class="home-section" aria-labelledby="what-we-do">
-      <h2 id="what-we-do">What we do</h2>
-      <p>
-        We focus on prevention and early support, so families can understand options and reduce escalation.
-        This includes families dealing with attendance pressure, school-related anxiety, and emotionally based school avoidance (EBSA).
-      </p>
-      <p>
-        We provide practical guidance, clear wording you can reuse, and signposting to help you prepare for meetings, understand your rights, and keep your child safe.
-      </p>
-    </section>
+      <a class="start-here-card" href="parent-guide-app.en.html">
+        <h3>Parent Guide App</h3>
+        <p>Our developing app to make support easier to find, use and share.</p>
+      </a>
+    </div>
+  </section>
 
-    <section class="home-section" aria-labelledby="start-here">
-      <h2 id="start-here">Start here</h2>
+</main>
 
-      <div class="home-grid">
-        <div class="home-card">
-          <h3>New here?</h3>
-          <p>Find out who we are, how we work, and what we can and cannot do.</p>
-          <a href="/about.en.html">Go to About</a>
-        </div>
+<style>
+  /* Keep this lightweight and self-contained so we do not break site-wide CSS */
 
-        <div class="home-card">
-          <h3>Need support this month?</h3>
-          <p>See our upcoming events and workshops, including parent Q&amp;A sessions.</p>
-          <a href="/events.en.html">Go to Events</a>
-        </div>
+  .hero { margin: 0 0 1.25rem 0; }
+  .lead { max-width: 70ch; }
 
-        <div class="home-card">
-          <h3>Prefer to read quietly?</h3>
-          <p>Our blog is where we publish longer, practical guides and lived-experience pieces.</p>
-          <a href="https://learnwithoutlimitscic.blogspot.com/" target="_blank" rel="noopener">Go to Blog</a>
-        </div>
-      </div>
-    </section>
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
 
-    <section class="home-section" aria-labelledby="footer-note">
-      <h2 id="footer-note">A quick note</h2>
-      <p>
-        We are building a digital parent guide app and a structured knowledge base so support is not dependent on who happens to be online.
-        This work is being developed alongside our events and community activity.
-      </p>
-    </section>
-  </main>
+  /* Tidy 3-image row on desktop, stacked on mobile */
+  .home-image-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0 2rem 0;
+  }
 
-  {% include footer.html %}
-</body>
-</html>
+  .home-card {
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .home-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 220px; /* prevents the “massive image wall” problem */
+    object-fit: cover;
+  }
+
+  .home-card-centre img {
+    object-fit: contain; /* centre dragon should not be cropped */
+    background: #f7f7f7;
+  }
+
+  .home-card figcaption {
+    padding: 0.75rem 0.9rem;
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .content-block { margin: 2rem 0; max-width: 80ch; }
+
+  .start-here-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    max-width: 90ch;
+  }
+
+  .start-here-card {
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 12px;
+    padding: 1rem;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+  }
+
+  .start-here-card h3 { margin: 0 0 0.4rem 0; }
+  .start-here-card p { margin: 0; }
+
+  @media (max-width: 900px) {
+    .home-image-row { grid-template-columns: 1fr; }
+    .home-card img { max-height: 260px; }
+    .start-here-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+
+  .
+
 
 
