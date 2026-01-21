@@ -1,424 +1,238 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>ALN Wales Support for Families | Learn Without Limits CIC</title>
-  <meta name="description" content="Parent-led ALN Wales support for families. Practical guidance on IDPs, EBSA, EOTAS and school inclusion, plus peer support events. Grounded in lived experience of parents and young adults.">
+  <title>Learn Without Limits CIC | ALN Wales support for families, children and young people</title>
+  <meta name="description" content="Learn Without Limits CIC provides parent-led support for ALN families in Wales, grounded in lived experience. Practical guidance on ALN, IDPs, EOTAS, EBSA and inclusion, plus events and free resources for children and young people." />
 
-  <link rel="canonical" href="https://learnwithoutlimitscic.org/index.en.html">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://learnwithoutlimitscic.org/index.en.html" />
 
-  <!-- If your site already uses a shared stylesheet, keep it. If not, this page still renders cleanly. -->
-  <style>
-    :root {
-      --maxw: 980px;
-      --pad: 1rem;
-      --radius: 14px;
-      --border: #e6e6e6;
-      --text: #111;
-      --muted: #444;
-      --bg: #fff;
-      --bg2: #fafafa;
-      --link: #0b57d0;
-      --focus: #111;
+  <!-- Styles -->
+  <link rel="preload" href="/assets/css/styles.css" as="style" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <!-- Language alternates -->
+  <link rel="alternate" href="/index.en.html" hreflang="en" />
+  <link rel="alternate" href="/index.cy.html" hreflang="cy" />
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.ico" />
+
+  <!-- Privacy-friendly analytics (Plausible) -->
+  <script defer data-domain="learnwithoutlimitscic.org" src="https://plausible.io/js/script.js"></script>
+
+  <!-- Google site verification (keep your existing value if already present elsewhere) -->
+  <meta name="google-site-verification" content="7DD0B189B847719B87A14A0B79288076" />
+
+  <!-- Service worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js");
     }
-
-    /* Respect reduce motion */
-    @media (prefers-reduced-motion: reduce) {
-      * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.55;
-      font-size: 18px;
-    }
-
-    a { color: var(--link); }
-    a:focus, button:focus { outline: 3px solid var(--focus); outline-offset: 2px; }
-
-    .skip-link {
-      position: absolute;
-      left: -999px;
-      top: 0;
-      background: #fff;
-      padding: 0.5rem 0.75rem;
-      border: 2px solid #000;
-      z-index: 9999;
-    }
-    .skip-link:focus { left: 0.75rem; top: 0.75rem; }
-
-    header {
-      border-bottom: 1px solid var(--border);
-      background: var(--bg);
-    }
-
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: var(--pad); }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding-top: 0.25rem;
-      padding-bottom: 0.25rem;
-    }
-
-    .brand img { width: 72px; height: 72px; border-radius: 50%; border: 1px solid var(--border); }
-
-    .brand .tagline {
-      font-size: 0.95rem;
-      color: var(--muted);
-      margin: 0.1rem 0 0 0;
-    }
-
-    nav {
-      margin-top: 0.25rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      align-items: center;
-    }
-
-    nav a {
-      text-decoration: none;
-      padding: 0.35rem 0.5rem;
-      border-radius: 10px;
-    }
-    nav a:hover { text-decoration: underline; }
-
-    .lang-toggle {
-      margin-left: auto;
-      border: 1px solid var(--border);
-      background: var(--bg2);
-    }
-
-    .accessibility-bar {
-      margin-top: 0.75rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      align-items: center;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    .accessibility-bar button {
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: var(--bg2);
-      padding: 0.4rem 0.7rem;
-      cursor: pointer;
-      font-size: 0.95rem;
-    }
-
-    main { padding-top: 1rem; padding-bottom: 2rem; }
-
-    h1 { font-size: 2.1rem; margin: 0.5rem 0 0.25rem 0; }
-    h2 { font-size: 1.4rem; margin: 1.6rem 0 0.6rem 0; }
-    h3 { font-size: 1.15rem; margin: 1.2rem 0 0.4rem 0; }
-
-    .lead { font-size: 1.1rem; color: var(--muted); max-width: 70ch; }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin: 1rem 0 1.25rem 0;
-    }
-
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 0.55rem 0.8rem;
-      background: var(--bg2);
-      color: var(--text);
-      font-weight: 600;
-    }
-    .btn.primary { background: #111; color: #fff; border-color: #111; }
-    .btn:hover { text-decoration: underline; }
-
-    .image-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 0.75rem;
-      margin: 1rem 0 1.25rem 0;
-    }
-
-    .image-row figure { margin: 0; }
-    .image-row img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: var(--bg2);
-    }
-
-    @media (max-width: 780px) {
-      .image-row { grid-template-columns: 1fr; }
-      .image-row img { height: 220px; }
-      .lang-toggle { margin-left: 0; }
-    }
-
-    .card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--bg2);
-      padding: 1rem;
-      margin-top: 0.75rem;
-    }
-
-    ul { margin-top: 0.5rem; }
-
-    footer {
-      border-top: 1px solid var(--border);
-      background: var(--bg);
-      padding: 1.5rem 0;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      gap: 1rem;
-    }
-
-    @media (max-width: 780px) {
-      .footer-grid { grid-template-columns: 1fr; }
-    }
-
-    .small { font-size: 0.95rem; color: var(--muted); }
-    .footer-links a { display: inline-block; margin-right: 0.75rem; margin-bottom: 0.35rem; }
-
-    /* High contrast mode */
-    body.high-contrast {
-      --text: #000;
-      --muted: #000;
-      --bg: #fff;
-      --bg2: #fff;
-      --border: #000;
-      --link: #0000ee;
-      --focus: #000;
-    }
-  </style>
+  </script>
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header>
-    <div class="wrap">
-      <div class="brand" aria-label="Learn Without Limits CIC">
-        <!-- Update this filename only if your logo file is named differently -->
-        <img src="assets/logo-badge.png" alt="Learn Without Limits CIC badge logo, red Welsh dragon with bilingual ring">
-        <div>
-          <div style="font-weight: 800;">Learn Without Limits CIC</div>
-          <p class="tagline">Parent-led support for ALN families in Wales.</p>
-        </div>
-      </div>
-
-      <nav aria-label="Main menu">
-        <a href="index.en.html" aria-current="page">Home</a>
-        <a href="about.en.html">About</a>
-        <a href="app.en.html">Parent Guide App</a>
-        <a href="events.en.html">Events</a>
-        <a href="contact.en.html">Contact</a>
-        <a href="https://learnwithoutlimitscic.blogspot.com/" rel="external">Blog</a>
-
-        <!-- Welsh language toggle -->
-        <a class="lang-toggle" href="index.cy.html" lang="cy">Cymraeg</a>
-      </nav>
-
-      <div class="accessibility-bar" aria-label="Accessibility controls">
-        <span><strong>Read this page</strong></span>
-        <button type="button" id="textSizeBtn">Text size</button>
-        <button type="button" id="contrastBtn">High contrast</button>
-        <button type="button" id="motionBtn">Reduce motion</button>
+  <header class="site-header" role="banner">
+    <div class="site-brand">
+      <picture>
+        <img
+          src="/assets/img/LearnWithoutLimits_Badge.png"
+          alt="Learn Without Limits CIC badge logo, red Welsh dragon with bilingual ring"
+          width="96"
+          height="96"
+          decoding="async"
+          loading="eager"
+        />
+      </picture>
+      <div>
+        <span class="brand-title">Learn Without Limits CIC</span>
+        <span class="brand-tag">Parent-led support for ALN families in Wales.</span>
       </div>
     </div>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="/index.en.html" aria-current="page">Home</a></li>
+        <li><a href="/about.en.html">About</a></li>
+        <li><a href="/app.en.html">Parent Guide App</a></li>
+        <li><a href="/events.en.html">Events</a></li>
+        <li><a href="/contact.en.html">Contact</a></li>
+        <li><a href="https://learnwithoutlimitscic.blogspot.com/" target="_blank" rel="noopener">Blog</a></li>
+      </ul>
+    </nav>
+
+    <nav class="lang-switch" aria-label="Language switch">
+      <a class="btn ghost" href="/index.cy.html" lang="cy" hreflang="cy" aria-label="Switch language to Cymraeg">Cymraeg</a>
+    </nav>
   </header>
 
-  <main id="main" class="wrap">
-    <h1>Learn Without Limits CIC</h1>
-    <p class="lead">
-      Parent-led support for ALN families in Wales, grounded in the lived experience of parents and young adults.
-      We support families of children and young people navigating ALN, IDPs, EOTAS, EBSA and school inclusion.
-    </p>
+  <div class="a11y-controls" role="region" aria-label="Accessibility controls">
+    <button class="btn" data-action="read">Read this page</button>
+    <button class="btn" data-action="font">Text size</button>
+    <button class="btn" data-action="contrast">High contrast</button>
+    <button class="btn" data-action="pause">Reduce motion</button>
+  </div>
 
-    <div class="cta-row" aria-label="Key actions">
-      <a class="btn primary" href="app.en.html">Download the Parent Guide App</a>
-      <a class="btn" href="events.en.html">See upcoming events</a>
-      <a class="btn" href="https://www.facebook.com/" rel="external">Join us on Facebook</a>
-    </div>
+  <main id="main" tabindex="-1">
+    <section class="hero">
+      <h1>Learn Without Limits CIC</h1>
 
-    <!-- Three-image row directly under the main heading, dragon in the centre -->
-    <section aria-label="Learn Without Limits CIC: community and Wales">
-      <div class="image-row">
-        <figure>
-          <img src="assets/home-peer-left.png" alt="Parents and carers sitting together in a calm peer support discussion" loading="eager">
-        </figure>
-
-        <figure>
-          <img src="assets/home-dragon-centre.png" alt="Child riding a red dragon over the Welsh landscape, symbolising hope and support for families in Wales" loading="eager">
-        </figure>
-
-        <figure>
-          <img src="assets/home-peer-right.png" alt="Families sharing experiences in an informal parent support group" loading="eager">
-        </figure>
-      </div>
-    </section>
-
-    <section aria-label="What we do">
-      <h2>What we do</h2>
-      <p class="small">
-        We focus on prevention and early support, so families can understand options and reduce escalation.
-        This includes families dealing with attendance pressure, school-related anxiety, and emotionally based school avoidance (EBSA).
+      <p class="lead">
+        Parent-led support for ALN families in Wales, grounded in the lived experience of parents and young adults.
+        We support families of children and young people navigating ALN, IDPs, EOTAS, EBSA and school inclusion.
       </p>
 
-      <ul>
-        <li>Practical guidance for ALN in Wales, including the ALN Act and IDP processes</li>
-        <li>Plain-English explainers for families supporting children and young people</li>
-        <li>Peer support and lived experience mentoring</li>
-        <li>Events including online Q and A sessions and local meet-ups</li>
+      <div class="hero-actions">
+        <a class="btn primary" href="/app.en.html">Download the Parent Guide App</a>
+        <a class="btn" href="/events.en.html">See upcoming events</a>
+        <a class="btn ghost" href="https://www.facebook.com/groups/learnwithoutlimitscic" target="_blank" rel="noopener">Join us on Facebook</a>
+      </div>
+
+      <!-- 3-image row directly under the main heading (dragon in the centre) -->
+      <div class="hero-images" aria-label="Learn Without Limits CIC in Wales">
+        <figure class="hero-image">
+          <img
+            src="/assets/img/home-peer-left.jpg"
+            alt="Parents and carers sitting together in a calm peer support discussion"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+
+        <figure class="hero-image">
+          <img
+            src="/assets/img/home-dragon-centre.png"
+            alt="A child riding a red dragon over a Welsh landscape, symbolising hope and support for families in Wales"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+
+        <figure class="hero-image">
+          <img
+            src="/assets/img/home-peer-right.jpg"
+            alt="Families sharing experiences in an informal parent support circle"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Self-updating block (keeps you out of maintenance hell) -->
+    <section class="home-latest" aria-labelledby="latest-heading">
+      <h2 id="latest-heading">Latest free resources <span class="pill">New this month</span></h2>
+      <ul id="latest-resources" class="resource-list" aria-live="polite">
+        <li>Loading…</li>
       </ul>
+      <p><a href="/resources.en.html">See all resources</a></p>
+      <script src="/assets/js/latest-resources.js" defer></script>
     </section>
 
-    <section aria-label="How families use Learn Without Limits CIC">
-      <h2>How families use Learn Without Limits CIC</h2>
+    <section class="grid" aria-labelledby="whatwedo-heading">
+      <h2 id="whatwedo-heading">What we do</h2>
 
-      <div class="card">
-        <h3>Peer support and events</h3>
+      <article class="card">
+        <h3>Practical guidance for ALN Wales</h3>
         <p>
-          Calm, accessible sessions where families can talk things through, ask questions, and reduce isolation.
-          Events are announced on our Events page and Eventbrite.
+          Clear, parent-friendly guidance on the ALN system in Wales, including IDPs, provision, and routes to challenge decisions.
+          We focus on what families can do next, not just what the law says.
         </p>
-        <p><a href="events.en.html">View upcoming events</a></p>
-      </div>
+      </article>
 
-      <div class="card">
-        <h3>Written guidance and information</h3>
+      <article class="card">
+        <h3>Support when school stops working</h3>
         <p>
-          Our blog includes practical explanations and real-world insight for ALN families in Wales, including the lived experience of parents and young adults.
+          Guidance and signposting for families facing reduced timetables, attendance pressure, school-related anxiety and EBSA,
+          plus pathways like EOTAS and alternative provision.
         </p>
-        <p><a href="https://learnwithoutlimitscic.blogspot.com/" rel="external">Browse the Blog</a></p>
-      </div>
+      </article>
 
-      <div class="card">
-        <h3>The Parent Guide App</h3>
+      <article class="card">
+        <h3>Events and community</h3>
         <p>
-          A developing digital guide bringing key information, support pathways, and printable tools together in one place.
+          Online Q&amp;As and local meet-ups, alongside peer support that respects confidentiality, safeguarding, and boundaries.
+          We are building a calmer, more useful alternative to rage-driven platforms.
         </p>
-        <p><a href="app.en.html">Learn about the Parent Guide App</a></p>
-      </div>
+      </article>
     </section>
 
-    <section aria-label="Governance and trust">
-      <h2>Governance, safeguarding and trust</h2>
-      <p>
-        We publish our policies so families, professionals, and funders can clearly see how we work, including safeguarding, complaints, and privacy.
-      </p>
-      <p><a href="about.en.html">Read about our governance and policies</a></p>
-    </section>
+    <section class="grid" aria-labelledby="whyus-heading">
+      <h2 id="whyus-heading">Why families use us</h2>
 
-    <section aria-label="Contact">
-      <h2>Contact</h2>
-      <ul>
-        <li><a href="mailto:support@learnwithoutlimitscic.org">support@learnwithoutlimitscic.org</a></li>
-        <li><a href="https://www.facebook.com/" rel="external">Facebook group</a></li>
-      </ul>
+      <article class="card">
+        <h3>Grounded in lived experience</h3>
+        <p>
+          We build tools shaped by the lived experience of parents, carers and young adults, with a focus on what genuinely helps.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Built for busy, burnt-out parents</h3>
+        <p>
+          Short, practical steps. Copy-and-paste wording. Clear options. No judgement.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Designed to scale across Wales</h3>
+        <p>
+          We are developing a digital “parent guide” app and a structured knowledge base so support is not dependent on who happens to be online.
+        </p>
+      </article>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">
-      <div class="footer-grid">
-        <div>
-          <h3>Quick links</h3>
-          <div class="footer-links">
-            <a href="app.en.html">Download the App</a>
-            <a href="events.en.html">Events</a>
-            <a href="about.en.html">About us</a>
-            <a href="https://learnwithoutlimitscic.blogspot.com/" rel="external">Blog</a>
-          </div>
-        </div>
-
-        <div>
-          <h3>Support us</h3>
-          <p class="small">Support options will be added later this year.</p>
-        </div>
-
-        <div>
-          <h3>Disclaimer</h3>
-          <p class="small">
-            Learn Without Limits CIC provides peer support and general information. We do not provide legal advice or crisis intervention.
-            If someone is in immediate danger, call 999. If you are worried about a child, contact your local safeguarding team.
-          </p>
-        </div>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:support@learnwithoutlimitscic.org">support@learnwithoutlimitscic.org</a></li>
+          <li><a href="https://www.facebook.com/groups/learnwithoutlimitscic" target="_blank" rel="noopener">Facebook group</a></li>
+        </ul>
       </div>
 
-      <p class="small" style="margin-top: 1rem;">
-        <a href="privacy.html">Privacy &amp; Safeguarding</a> &nbsp;·&nbsp; © 2026 Learn Without Limits CIC
+      <div>
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="/app.en.html">Download the App</a></li>
+          <li><a href="/events.en.html">Events</a></li>
+          <li><a href="/about.en.html">About us</a></li>
+          <li><a href="https://learnwithoutlimitscic.blogspot.com/" target="_blank" rel="noopener">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Support us</h3>
+        <p>Support us: coming soon (October).</p>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      <p>
+        <strong>Disclaimer:</strong> Information on this website is provided for general guidance and support only.
+        It is not legal advice. If you need legal advice, please speak to a qualified professional.
+        In an emergency or if someone is at immediate risk of harm, call 999.
       </p>
     </div>
+
+    <div class="legal">
+      <a href="/privacy.en.html">Privacy &amp; Safeguarding</a>
+      <span aria-hidden="true">·</span>
+      <span>&copy; 2025 Learn Without Limits CIC</span>
+    </div>
+
+    <script src="/assets/js/site.js" defer></script>
   </footer>
-
-  <script>
-    (function () {
-      // Text size toggle (normal -> large -> larger -> normal)
-      const sizes = ["18px", "20px", "22px"];
-      let sizeIndex = 0;
-
-      const textSizeBtn = document.getElementById("textSizeBtn");
-      const contrastBtn = document.getElementById("contrastBtn");
-      const motionBtn = document.getElementById("motionBtn");
-
-      const savedSize = localStorage.getItem("lwl_text_size_index");
-      const savedContrast = localStorage.getItem("lwl_contrast");
-      const savedReduceMotion = localStorage.getItem("lwl_reduce_motion");
-
-      if (savedSize !== null) {
-        sizeIndex = Math.min(Math.max(parseInt(savedSize, 10) || 0, 0), sizes.length - 1);
-        document.body.style.fontSize = sizes[sizeIndex];
-      }
-
-      if (savedContrast === "1") {
-        document.body.classList.add("high-contrast");
-      }
-
-      if (savedReduceMotion === "1") {
-        document.documentElement.style.scrollBehavior = "auto";
-      }
-
-      if (textSizeBtn) {
-        textSizeBtn.addEventListener("click", function () {
-          sizeIndex = (sizeIndex + 1) % sizes.length;
-          document.body.style.fontSize = sizes[sizeIndex];
-          localStorage.setItem("lwl_text_size_index", String(sizeIndex));
-        });
-      }
-
-      if (contrastBtn) {
-        contrastBtn.addEventListener("click", function () {
-          document.body.classList.toggle("high-contrast");
-          localStorage.setItem("lwl_contrast", document.body.classList.contains("high-contrast") ? "1" : "0");
-        });
-      }
-
-      if (motionBtn) {
-        motionBtn.addEventListener("click", function () {
-          const isReduced = localStorage.getItem("lwl_reduce_motion") === "1";
-          localStorage.setItem("lwl_reduce_motion", isReduced ? "0" : "1");
-          // No reload required. We keep this simple and respectful.
-          alert(isReduced ? "Reduce motion turned off." : "Reduce motion turned on.");
-        });
-      }
-    })();
-  </script>
 </body>
 </html>
+
+
 
