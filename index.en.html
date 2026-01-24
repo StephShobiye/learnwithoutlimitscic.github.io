@@ -18,12 +18,14 @@
       content="Parent-led support for ALN families in Wales. Practical guidance on ALN, IDPs, EOTAS, EBSA, EHE and school and college inclusion."
     />
 
-    <!-- SEO: THIS PAGE IS NOW A DUPLICATE OF / -->
-    <link rel="canonical" href="https://learnwithoutlimitscic.org/" />
-    <meta name="robots" content="noindex, follow, max-image-preview:large" />
-    <link rel="alternate" href="https://learnwithoutlimitscic.org/" hreflang="en" />
-    <link rel="alternate" href="https://learnwithoutlimitscic.org/cy/" hreflang="cy" />
-    <link rel="alternate" href="https://learnwithoutlimitscic.org/" hreflang="x-default" />
+    <!-- SEO: CANONICAL ENGLISH HOMEPAGE -->
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://learnwithoutlimitscic.org/index.en.html" />
+
+    <!-- hreflang pairing -->
+    <link rel="alternate" hreflang="en" href="https://learnwithoutlimitscic.org/index.en.html" />
+    <link rel="alternate" hreflang="cy" href="https://learnwithoutlimitscic.org/index.cy.html" />
+    <link rel="alternate" hreflang="x-default" href="https://learnwithoutlimitscic.org/index.en.html" />
 
     <!-- Social sharing -->
     <meta property="og:site_name" content="Learn Without Limits CIC" />
@@ -33,7 +35,7 @@
       property="og:description"
       content="Parent-led support for ALN families in Wales. Clear, practical guidance on ALN, IDPs, EOTAS, EBSA, EHE and inclusion."
     />
-    <meta property="og:url" content="https://learnwithoutlimitscic.org/" />
+    <meta property="og:url" content="https://learnwithoutlimitscic.org/index.en.html" />
     <meta property="og:image" content="https://learnwithoutlimitscic.org/assets/img/home-dragon-centre.png" />
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -41,8 +43,9 @@
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="icon" href="/assets/img/favicon.ico" />
 
-    <!-- Page-only layout stabilisers -->
+    <!-- Page-only layout stabilisers (scoped; no site-wide impact) -->
     <style>
+      /* Scope everything to this page only */
       body.page-home .hero-inner,
       body.page-home .content,
       body.page-home .site-header,
@@ -50,17 +53,18 @@
         width: 100%;
       }
 
+      /* Prevent unexpected horizontal scrolling from wide media */
       body.page-home {
         overflow-x: hidden;
       }
 
+      /* HERO: ensure clean two-column layout that collapses nicely */
       body.page-home .hero-inner {
         display: grid;
         grid-template-columns: 1.05fr 0.95fr;
         gap: clamp(1rem, 2vw, 2rem);
         align-items: center;
       }
-
       @media (max-width: 900px) {
         body.page-home .hero-inner {
           grid-template-columns: 1fr;
@@ -73,6 +77,7 @@
         }
       }
 
+      /* HERO image: never overflow or squash */
       body.page-home .hero-media img {
         width: 100%;
         height: auto;
@@ -80,18 +85,20 @@
         display: block;
       }
 
+      /* Cards grid: stable spacing and no overlap */
       body.page-home .grid.two {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: clamp(1rem, 2vw, 2rem);
+        align-items: start;
       }
-
       @media (max-width: 900px) {
         body.page-home .grid.two {
           grid-template-columns: 1fr;
         }
       }
 
+      /* Card images: stop the “giant photo swallowing the page” problem */
       body.page-home .card-body img {
         width: 100%;
         height: auto;
@@ -101,6 +108,7 @@
         max-width: 100%;
       }
 
+      /* Optional: keep these photos visually consistent without distortion */
       @supports (aspect-ratio: 16 / 9) {
         body.page-home .card-body img {
           aspect-ratio: 16 / 9;
@@ -108,18 +116,21 @@
         }
       }
 
+      /* Make card content breathe a bit on very wide screens */
       body.page-home .card-body {
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
       }
 
+      /* Buttons: wrap neatly on small screens */
       body.page-home .hero-actions {
         display: flex;
         flex-wrap: wrap;
         gap: 0.75rem;
       }
 
+      /* Accessibility: visible focus if theme is subtle */
       body.page-home a:focus-visible,
       body.page-home button:focus-visible {
         outline: 3px solid currentColor;
@@ -137,7 +148,7 @@
         };
     </script>
 
-    <!-- Structured data -->
+    <!-- Structured data (consistent with canonical URL) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -145,7 +156,7 @@
           {
             "@type": "Organization",
             "name": "Learn Without Limits CIC",
-            "url": "https://learnwithoutlimitscic.org/",
+            "url": "https://learnwithoutlimitscic.org/index.en.html",
             "logo": "https://learnwithoutlimitscic.org/assets/img/LearnWithoutLimits_Badge.png",
             "sameAs": [
               "https://www.facebook.com/groups/learnwithoutlimitscic",
@@ -155,14 +166,14 @@
           {
             "@type": "WebSite",
             "name": "Learn Without Limits CIC",
-            "url": "https://learnwithoutlimitscic.org/",
+            "url": "https://learnwithoutlimitscic.org/index.en.html",
             "inLanguage": "en"
           },
           {
             "@type": "WebPage",
             "name": "Home",
-            "url": "https://learnwithoutlimitscic.org/",
-            "isPartOf": { "@type": "WebSite", "url": "https://learnwithoutlimitscic.org/" },
+            "url": "https://learnwithoutlimitscic.org/index.en.html",
+            "isPartOf": { "@type": "WebSite", "url": "https://learnwithoutlimitscic.org/index.en.html" },
             "about": {
               "@type": "Thing",
               "name": "Additional Learning Needs (ALN) support in Wales"
@@ -177,6 +188,7 @@
   <body class="page-home">
     <a class="skip-link" href="#main">Skip to content</a>
 
+    <!-- HEADER -->
     <header class="site-header" role="banner">
       <div class="brand">
         <img
@@ -199,7 +211,7 @@
 
       <nav id="nav" class="site-nav" aria-label="Primary navigation">
         <ul>
-          <li><a href="/">Home</a></li>
+          <li><a href="/index.en.html" aria-current="page">Home</a></li>
           <li><a href="/about.en.html">About</a></li>
           <li><a href="/app.en.html">Parent Guide App</a></li>
           <li><a href="/events.en.html">Events</a></li>
@@ -213,10 +225,11 @@
       </nav>
 
       <nav class="lang-switch" aria-label="Language switch">
-        <a class="btn ghost" href="/cy/" lang="cy" hreflang="cy">Cymraeg</a>
+        <a class="btn ghost" href="/index.cy.html" lang="cy" hreflang="cy">Cymraeg</a>
       </nav>
     </header>
 
+    <!-- ACCESSIBILITY CONTROLS -->
     <div class="a11y-controls" role="region" aria-label="Accessibility controls">
       <button class="btn" data-action="tts" type="button">Read this page</button>
       <button class="btn" data-action="fontsize" type="button">Text size</button>
@@ -225,18 +238,129 @@
     </div>
 
     <main id="main" tabindex="-1">
-      <!-- CONTENT UNCHANGED -->
-      <!-- (identical to index.html homepage content) -->
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="home-title">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <h1 id="home-title">Learn Without Limits CIC</h1>
+            <p class="lead">
+              Parent-led support for ALN families in Wales, grounded in lived experience.
+              We provide clear, practical guidance on ALN, IDPs, EOTAS, EBSA, EHE, and
+              school and college inclusion.
+            </p>
+
+            <div class="hero-actions" aria-label="Quick actions">
+              <a class="btn primary" href="/app.en.html">Download the Parent Guide App</a>
+              <a class="btn ghost" href="/events.en.html">See upcoming events</a>
+              <a
+                class="btn ghost"
+                href="https://www.facebook.com/groups/learnwithoutlimitscic"
+                target="_blank"
+                rel="noopener"
+              >
+                Join our Facebook group
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <img
+              src="/assets/img/home-dragon-centre.png"
+              alt="Learn Without Limits CIC Welsh dragon illustration"
+              width="900"
+              height="700"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT WE OFFER -->
+      <section class="content" aria-labelledby="offer-title">
+        <div class="grid two">
+          <div class="card">
+            <div class="card-body">
+              <img
+                src="/assets/img/home-peer-left.jpg"
+                alt="Parent peer support and guidance"
+                width="1200"
+                height="675"
+                loading="lazy"
+                decoding="async"
+              />
+              <h2 id="offer-title">What we offer</h2>
+              <ul>
+                <li>Practical guides and signposting for ALN families across Wales</li>
+                <li>Templates and printables for writing to schools and local authorities</li>
+                <li>Clear explanations of IDP, EOTAS, EBSA and reduced timetables</li>
+                <li>Community support and trusted resources</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <img
+                src="/assets/img/home-peer-right.jpg"
+                alt="Clear next steps for families navigating ALN systems"
+                width="1200"
+                height="675"
+                loading="lazy"
+                decoding="async"
+              />
+              <h2>Start here</h2>
+              <p>
+                If you are overwhelmed, start with the most common "next steps"
+                families ask for. These pages are designed to be quick to scan
+                and easy to use.
+              </p>
+              <ul>
+                <li><a href="/about.en.html">About our work</a></li>
+                <li><a href="/app.en.html">Parent Guide App overview</a></li>
+                <li><a href="/events.en.html">Events and workshops</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOG -->
+      <section class="content" aria-labelledby="blog-title">
+        <div class="card">
+          <h2 id="blog-title">From the blog</h2>
+          <p>
+            Our blog shares in-depth guidance and lived-experience insights for ALN families in Wales, linked to our events and community support.
+          </p>
+          <a
+            class="btn ghost"
+            href="https://learnwithoutlimitscic.blogspot.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read the blog
+          </a>
+        </div>
+      </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer" role="contentinfo">
       <div class="footer-grid">
         <div>
           <h3>Contact</h3>
           <ul>
-            <li><a href="mailto:support@learnwithoutlimitscic.org">support@learnwithoutlimitscic.org</a></li>
             <li>
-              <a href="https://www.facebook.com/groups/learnwithoutlimitscic" target="_blank" rel="noopener">
+              <a href="mailto:support@learnwithoutlimitscic.org">
+                support@learnwithoutlimitscic.org
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/groups/learnwithoutlimitscic"
+                target="_blank"
+                rel="noopener"
+              >
                 Facebook group
               </a>
             </li>
@@ -255,15 +379,28 @@
 
         <div>
           <h3>Note</h3>
-          <p class="note">© <span id="year"></span> Learn Without Limits CIC. All rights reserved.</p>
+          <p class="note">
+            © <span id="year"></span> Learn Without Limits CIC. All rights reserved.
+          </p>
           <p class="note small">
-            We provide peer support and guidance only. Please seek professional legal or clinical advice when appropriate.
+            We provide peer support and guidance only. Please seek professional legal
+            or clinical advice when appropriate.
           </p>
         </div>
       </div>
     </footer>
 
     <script>
+      // Remember language choice when user switches from EN page
+      (function () {
+        try {
+          document.querySelector(".lang-switch a")?.addEventListener("click", function () {
+            localStorage.setItem("lwl_lang", "cy");
+          });
+          localStorage.setItem("lwl_lang", "en");
+        } catch (e) {}
+      })();
+
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 
