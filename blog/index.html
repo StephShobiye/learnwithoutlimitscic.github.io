@@ -1,4 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Blog | Learn Without Limits CIC Blog</title>
+  <meta name="description" content="Articles and updates from Learn Without Limits CIC.">
+
+  <!-- Main site CSS (shared) -->
+  <link rel="preload" href="https://learnwithoutlimitscic.org/assets/css/styles.css" as="style">
+  <link rel="stylesheet" href="https://learnwithoutlimitscic.org/assets/css/styles.css">
+
+  <link rel="icon" href="https://learnwithoutlimitscic.org/assets/img/favicon.ico">
+
+  <!-- Optional: canonical (helps avoid duplicate URL confusion) -->
+  
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <img src="https://learnwithoutlimitscic.org/assets/img/Logo_FullColour.png" alt="Learn Without Limits CIC logo" onerror="this.style.display='none'">
+      <div class="brand-text">
+        <span class="brand-title">Learn Without Limits CIC</span>
+        <span class="brand-tag">Parent-led support for ALN families in Wales.</span>
+      </div>
+    </div>
+
+    <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="nav" type="button">Menu</button>
+
+    <nav id="nav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="https://learnwithoutlimitscic.org/index.en.html">Home</a></li>
+        <li><a href="https://learnwithoutlimitscic.org/about.en.html">About</a></li>
+        <li><a href="https://learnwithoutlimitscic.org/app.en.html">Parent Guide App</a></li>
+        <li><a href="https://learnwithoutlimitscic.org/events.en.html">Events</a></li>
+        <li><a href="https://learnwithoutlimitscic.org/contact.en.html">Contact</a></li>
+        <li><a href="https://learnwithoutlimitscic.org/support.en.html">Support</a></li>
+
+        <!-- Blog = current section -->
+        <li><a href="https://learnwithoutlimitscic.org/blog/" aria-current="page">Blog</a></li>
+      </ul>
+    </nav>
+
+    <nav class="lang-switch" aria-label="Language switch">
+      <!-- You can later wire this to a Welsh blog landing page if you create one -->
+      <a class="btn ghost" href="https://learnwithoutlimitscic.org/index.cy.html" lang="cy" hreflang="cy" aria-label="Switch language to Cymraeg">Cymraeg</a>
+    </nav>
+  </header>
+
+  <div class="a11y-controls" role="region" aria-label="Accessibility controls">
+    <button class="btn" data-action="tts" type="button">Read this page</button>
+    <button class="btn" data-action="fontsize" type="button">Text size</button>
+    <button class="btn" data-action="contrast" type="button">High contrast</button>
+    <button class="btn" data-action="pause-anim" type="button">Reduce motion</button>
+  </div>
+
+  <main id="main" tabindex="-1">
+    <section class="content wide">
+      <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -17,5 +79,45 @@
   
 </ul>
 
+</body>
+</html>
+
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:support@learnwithoutlimitscic.org">support@learnwithoutlimitscic.org</a></li>
+          <li><a href="https://www.facebook.com/groups/learnwithoutlimitscic" rel="noopener" target="_blank">Facebook group</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="https://learnwithoutlimitscic.org/app.en.html">Download the App</a></li>
+          <li><a href="https://learnwithoutlimitscic.org/events.en.html">Events</a></li>
+          <li><a href="https://learnwithoutlimitscic.org/about.en.html">About us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Support us</h3>
+        <p>Support us: coming soon (October).</p>
+      </div>
+    </div>
+    <div class="legal">
+      <a href="https://learnwithoutlimitscic.org/privacy.en.html">Privacy &amp; Safeguarding</a>
+      <span aria-hidden="true"> · </span>
+      <span>&copy; <span id="year"></span> Learn Without Limits CIC</span>
+    </div>
+  </footer>
+
+  <!-- Main site JS (shared) -->
+  <script src="https://learnwithoutlimitscic.org/assets/js/site.js" defer></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
