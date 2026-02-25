@@ -3,21 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} | {{ site.title }}</title>
+
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+
   <link rel="stylesheet" href="/assets/css/accessibility.css">
   <link rel="stylesheet" href="/assets/css/brand.css">
   <link rel="stylesheet" href="/assets/css/badges.css">
+
   <link rel="icon" type="image/png" href="/assets/img/LearnWithoutLimits_Badge.png" sizes="any">
+
+  <!-- Canonical URL (prevents duplicate URL variants diluting SEO) -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- RSS feed discovery (useful for professionals and a trust signal) -->
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | absolute_url }}">
+
   {% seo %}
 </head>
+
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-{% include header-logo.html %}
-<main id="main">
-  {{ content }}
-</main>
-<footer>
-  <p>&copy; 2025 Learn Without Limits CIC</p>
-</footer>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  {% include header-logo.html %}
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>&copy; {{ site.time | date: "%Y" }} Learn Without Limits CIC</p>
+  </footer>
 </body>
 </html>
