@@ -18,23 +18,19 @@
       content="Choose your language to visit Learn Without Limits CIC."
     />
 
-    <!-- SEO: helper page (do NOT index) -->
+    <!-- SEO -->
     <meta name="robots" content="noindex,follow,max-image-preview:large" />
     <link rel="canonical" href="https://learnwithoutlimitscic.org/index.en.html" />
 
-    <!-- Language relationships (real pages) -->
     <link rel="alternate" hreflang="en" href="https://learnwithoutlimitscic.org/index.en.html" />
     <link rel="alternate" hreflang="cy" href="https://learnwithoutlimitscic.org/index.cy.html" />
     <link rel="alternate" hreflang="x-default" href="https://learnwithoutlimitscic.org/index.en.html" />
 
-    <!-- Social sharing (point shares at the real English page) -->
+    <!-- Social -->
     <meta property="og:site_name" content="Learn Without Limits CIC" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Learn Without Limits CIC | Parent-led ALN support in Wales" />
-    <meta
-      property="og:description"
-      content="Parent-led support for ALN families in Wales. Clear, practical guidance on ALN, IDPs, EOTAS, EBSA, EHE and inclusion."
-    />
+    <meta property="og:description" content="Parent-led support for ALN families in Wales. Clear, practical guidance on ALN, IDPs, EOTAS, EBSA, EHE and inclusion." />
     <meta property="og:url" content="https://learnwithoutlimitscic.org/index.en.html" />
     <meta property="og:image" content="https://learnwithoutlimitscic.org/assets/img/home-dragon-centre.png" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -47,56 +43,57 @@
       body.page-lang {
         overflow-x: hidden;
       }
+
       .lang-wrap {
         max-width: 64rem;
         margin: 0 auto;
         padding: clamp(1rem, 3vw, 2rem);
       }
+
       .lang-card {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255,255,255,0.02);
+        border: 1px solid rgba(255,255,255,0.08);
         border-radius: 1rem;
-        padding: clamp(1rem, 3vw, 2rem);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        padding: clamp(1rem,3vw,2rem);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
       }
+
       .lang-actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.75rem;
+        gap: .75rem;
         margin-top: 1rem;
       }
 
-      /* NEW: bilingual welcome panel under the buttons */
+      /* Welcome grid */
+
       .lang-welcome {
-        margin-top: 1.25rem;
-        padding: 1rem;
-        border-radius: 0.875rem;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(255, 255, 255, 0.02);
+        margin-top: 1.5rem;
         display: grid;
-        gap: 1rem;
+        gap: 1.25rem;
       }
-      .lang-welcome-title {
-        font-size: 1rem;
-        margin: 0 0 0.5rem 0;
+
+      .lang-welcome-col h2 {
+        font-size: 1.1rem;
+        margin-bottom: .4rem;
       }
-      .lang-welcome p {
+
+      .lang-welcome-col p {
         margin: 0;
-        line-height: 1.55;
+        line-height: 1.6;
       }
+
       @media (min-width: 48rem) {
+
         .lang-welcome {
           grid-template-columns: 1fr 1fr;
-          gap: 1.25rem;
         }
-        .lang-welcome-col {
-          padding-right: 0.5rem;
-        }
+
         .lang-welcome-col + .lang-welcome-col {
-          border-left: 1px solid rgba(255, 255, 255, 0.08);
+          border-left: 1px solid rgba(255,255,255,0.08);
           padding-left: 1.25rem;
-          padding-right: 0;
         }
+
       }
 
       a:focus-visible,
@@ -104,24 +101,27 @@
         outline: 3px solid currentColor;
         outline-offset: 3px;
       }
+
     </style>
 
     <!-- Privacy-friendly analytics -->
     <script async src="https://plausible.io/js/pa-gaby38fWeDduCw6Ude0EX.js"></script>
     <script>
-      window.plausible =
-        window.plausible ||
-        function () {
-          (window.plausible.q = window.plausible.q || []).push(arguments);
-        };
+      window.plausible = window.plausible || function () {
+        (window.plausible.q = window.plausible.q || []).push(arguments)
+      }
     </script>
+
   </head>
 
   <body class="page-lang">
+
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header" role="banner">
+
       <div class="brand">
+
         <img
           src="/assets/img/LearnWithoutLimits_Badge.png"
           alt="Learn Without Limits CIC badge logo with Welsh dragon"
@@ -130,52 +130,95 @@
           loading="eager"
           decoding="async"
         />
+
         <div class="brand-text">
           <span class="brand-title">Learn Without Limits CIC</span>
           <span class="brand-tag">Parent-led support for ALN families in Wales.</span>
         </div>
+
       </div>
+
     </header>
 
+
     <main id="main" tabindex="-1" class="lang-wrap">
+
       <section class="lang-card" aria-labelledby="lang-title">
+
         <h1 id="lang-title">Choose your language</h1>
+
         <p class="lead">
           Please select English or Cymraeg to continue.
         </p>
 
         <div class="lang-actions" aria-label="Language options">
-          <a class="btn primary" href="/index.en.html" lang="en" hreflang="en" data-lang="en">English</a>
-          <a class="btn ghost" href="/index.cy.html" lang="cy" hreflang="cy" data-lang="cy">Cymraeg</a>
+
+          <a class="btn primary"
+             href="/index.en.html"
+             lang="en"
+             hreflang="en"
+             data-lang="en">
+             English
+          </a>
+
+          <a class="btn ghost"
+             href="/index.cy.html"
+             lang="cy"
+             hreflang="cy"
+             data-lang="cy">
+             Cymraeg
+          </a>
+
         </div>
 
-        <!-- NEW: bilingual welcome note under the buttons -->
+
+        <!-- Welsh welcome panel -->
+
         <div class="lang-welcome" aria-label="Welsh language welcome">
+
           <div class="lang-welcome-col" lang="en">
-            <h2 class="lang-welcome-title">Welsh-speaking parents and carers</h2>
+
+            <h2>Welsh-speaking parents and carers</h2>
+
             <p>
               Welsh-speaking parents and carers are very welcome in our community.
-              We are currently developing Welsh-language capacity within Learn Without Limits CIC and would especially welcome connections with Welsh speakers who want to help us improve access for families.
+              We are currently developing Welsh-language capacity within Learn Without Limits CIC
+              and would especially welcome connections with Welsh speakers who want to help us
+              improve access for families.
             </p>
+
           </div>
+
 
           <div class="lang-welcome-col" lang="cy">
-            <h2 class="lang-welcome-title">Rhieni a gofalwyr Cymraeg eu hiaith</h2>
+
+            <h2>Rhieni a gofalwyr Cymraeg eu hiaith</h2>
+
             <p>
               Mae croeso mawr i rieni a gofalwyr Cymraeg eu hiaith yn ein cymuned.
-              Rydym ar hyn o bryd yn datblygu capasiti Cymraeg o fewn Learn Without Limits CIC ac yn croesawu cysylltiadau gyda siaradwyr Cymraeg sy’n awyddus i helpu i wella mynediad i deuluoedd.
+              Rydym ar hyn o bryd yn datblygu capasiti Cymraeg o fewn Learn Without Limits CIC
+              ac yn croesawu cysylltiadau gyda siaradwyr Cymraeg sy’n awyddus i helpu i wella
+              mynediad i deuluoedd.
             </p>
+
           </div>
+
         </div>
 
-        <p class="note small" style="margin-top: 1rem;">
+
+        <p class="note small" style="margin-top:1rem;">
           Tip: we’ll remember your choice on this device.
         </p>
+
       </section>
+
     </main>
 
+
     <footer class="site-footer" role="contentinfo">
+
       <div class="footer-grid">
+
         <div>
           <h3>Contact</h3>
           <ul>
@@ -185,12 +228,10 @@
               </a>
             </li>
             <li>
-              <a
-                href="https://www.facebook.com/groups/learnwithoutlimitscic"
-                target="_blank"
-                rel="noopener"
-              >
-                Facebook group
+              <a href="https://www.facebook.com/groups/learnwithoutlimitscic"
+                 target="_blank"
+                 rel="noopener">
+                 Facebook group
               </a>
             </li>
           </ul>
@@ -217,33 +258,32 @@
             or clinical advice when appropriate.
           </p>
         </div>
+
       </div>
+
     </footer>
 
+
     <script>
-      // Remember language choice (no redirects; avoids crawl weirdness)
-      document.querySelectorAll("[data-lang]").forEach(function (link) {
-        link.addEventListener("click", function () {
+
+      document.querySelectorAll("[data-lang]").forEach(function(link){
+
+        link.addEventListener("click", function(){
+
           try {
-            localStorage.setItem("lwl_lang", link.getAttribute("data-lang"));
-          } catch (e) {}
-        });
-      });
+            localStorage.setItem("lwl_lang", link.getAttribute("data-lang"))
+          } catch(e){}
 
-      // If the user previously chose a language, show a subtle “continue” behaviour for humans only
-      // (No automatic redirect – keeps it stable and predictable)
-      (function () {
-        try {
-          var lang = localStorage.getItem("lwl_lang");
-          if (lang === "cy") {
-            // Nothing forced; the Cymraeg button is already visible
-          }
-        } catch (e) {}
-      })();
+        })
 
-      document.getElementById("year").textContent = new Date().getFullYear();
+      })
+
+      document.getElementById("year").textContent =
+        new Date().getFullYear()
+
     </script>
 
     <script src="/assets/js/site.js" defer></script>
+
   </body>
 </html>
