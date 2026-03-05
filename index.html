@@ -65,6 +65,40 @@
         gap: 0.75rem;
         margin-top: 1rem;
       }
+
+      /* NEW: bilingual welcome panel under the buttons */
+      .lang-welcome {
+        margin-top: 1.25rem;
+        padding: 1rem;
+        border-radius: 0.875rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.02);
+        display: grid;
+        gap: 1rem;
+      }
+      .lang-welcome-title {
+        font-size: 1rem;
+        margin: 0 0 0.5rem 0;
+      }
+      .lang-welcome p {
+        margin: 0;
+        line-height: 1.55;
+      }
+      @media (min-width: 48rem) {
+        .lang-welcome {
+          grid-template-columns: 1fr 1fr;
+          gap: 1.25rem;
+        }
+        .lang-welcome-col {
+          padding-right: 0.5rem;
+        }
+        .lang-welcome-col + .lang-welcome-col {
+          border-left: 1px solid rgba(255, 255, 255, 0.08);
+          padding-left: 1.25rem;
+          padding-right: 0;
+        }
+      }
+
       a:focus-visible,
       button:focus-visible {
         outline: 3px solid currentColor;
@@ -113,6 +147,25 @@
         <div class="lang-actions" aria-label="Language options">
           <a class="btn primary" href="/index.en.html" lang="en" hreflang="en" data-lang="en">English</a>
           <a class="btn ghost" href="/index.cy.html" lang="cy" hreflang="cy" data-lang="cy">Cymraeg</a>
+        </div>
+
+        <!-- NEW: bilingual welcome note under the buttons -->
+        <div class="lang-welcome" aria-label="Welsh language welcome">
+          <div class="lang-welcome-col" lang="en">
+            <h2 class="lang-welcome-title">Welsh-speaking parents and carers</h2>
+            <p>
+              Welsh-speaking parents and carers are very welcome in our community.
+              We are currently developing Welsh-language capacity within Learn Without Limits CIC and would especially welcome connections with Welsh speakers who want to help us improve access for families.
+            </p>
+          </div>
+
+          <div class="lang-welcome-col" lang="cy">
+            <h2 class="lang-welcome-title">Rhieni a gofalwyr Cymraeg eu hiaith</h2>
+            <p>
+              Mae croeso mawr i rieni a gofalwyr Cymraeg eu hiaith yn ein cymuned.
+              Rydym ar hyn o bryd yn datblygu capasiti Cymraeg o fewn Learn Without Limits CIC ac yn croesawu cysylltiadau gyda siaradwyr Cymraeg sy’n awyddus i helpu i wella mynediad i deuluoedd.
+            </p>
+          </div>
         </div>
 
         <p class="note small" style="margin-top: 1rem;">
