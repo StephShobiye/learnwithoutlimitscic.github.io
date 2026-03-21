@@ -36,7 +36,7 @@
       content="Practical, parent-led ALN support for families in Wales, including guidance on ALN rights, IDPs, EOTAS, EBSA, EHE and inclusion."
     />
     <meta property="og:url" content="https://learnwithoutlimitscic.org/index.en.html" />
-    <meta property="og:image" content="https://learnwithoutlimitscic.org/assets/img/home-dragon-centre.png" />
+    <meta property="og:image" content="https://learnwithoutlimitscic.org/assets/img/boy_on_dragon.webp" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="preload" href="/assets/css/styles.css" as="style" />
@@ -156,25 +156,16 @@
         gap: 0.75rem;
       }
 
-      /* Model section: 3-up on larger screens */
-      body.page-home .model-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        margin-top: 1rem;
+      body.page-home .model-visual {
+        margin-top: 1.25rem;
       }
 
-      @media (max-width: 900px) {
-        body.page-home .model-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      body.page-home .model-block {
-        padding: 1rem;
-        border: 1px solid rgba(0, 0, 0, 0.08);
+      body.page-home .model-visual img {
+        width: 100%;
+        height: auto;
+        display: block;
         border-radius: 0.75rem;
-        background: rgba(255, 255, 255, 0.55);
+        max-width: 100%;
       }
 
       body.page-home a:focus-visible,
@@ -311,10 +302,10 @@
 
           <div class="hero-media">
             <img
-              src="/assets/img/home-dragon-centre.png"
-              alt="Learn Without Limits CIC Welsh dragon illustration"
-              width="900"
-              height="700"
+              src="/assets/img/boy_on_dragon.webp"
+              alt="Child riding a red dragon beneath a rainbow"
+              width="1024"
+              height="1536"
               loading="eager"
               decoding="async"
             />
@@ -328,34 +319,23 @@
           <h2 id="model-title">Our Prevent → Bridge → Progress model</h2>
 
           <p>
-            We support families earlier, before problems escalate. Our approach focuses on preventing avoidable crisis, bridging periods where education has begun to break down, and supporting progression into education, training, and longer-term outcomes.
+            We support families earlier, before problems escalate. Our approach focuses on preventing avoidable crisis, supporting re-engagement where education begins to break down, and enabling progression into education, training and employment.
           </p>
 
-          <div class="model-grid">
-            <div class="model-block">
-              <h3>Prevent</h3>
-              <p>
-                Early guidance to help families understand their rights, navigate systems, and take informed next steps before challenges escalate.
-              </p>
-              <p>
-                Practical support and tools for families dealing with school/college breakdown, attendance difficulties, exclusion risk, or reduced timetables.
-              </p>
-            </div>
-
-            <div class="model-block">
-              <h3>Bridge</h3>
-              <p>
-                Bridging pathways support re-engagement with learning and progression into education, training and employment.
-              </p>
-            </div>
-
-            <div class="model-block">
-              <h3>Progress</h3>
-              <p>
-                Progress itself is delivered by schools, colleges, and statutory services. Our role is to help families engage with those systems earlier, more effectively, and with greater clarity.
-              </p>
-            </div>
+          <div class="model-visual">
+            <img
+              src="/assets/img/prevent_bridge_progress.webp"
+              alt="Prevent Bridge Progress model showing early intervention, bridging pathways and progression into education, training and employment for ALN families in Wales"
+              width="1024"
+              height="1536"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
+
+          <p style="margin-top: 1rem;">
+            This model shows how early guidance reduces escalation, supports families through periods where education begins to break down, and enables progression into education, training and employment.
+          </p>
 
           <p style="margin-top: 1rem;">
             <a href="https://blog.learnwithoutlimitscic.org/2026/03/18/prevention-bridging-progression-aln/">
