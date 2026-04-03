@@ -98,3 +98,26 @@ html.hc .card, html.hc .hero{background:#111;color:#fff}
   max-width: 280px;
   height: auto;
 }
+
+/* About page ecosystem diagram */
+.ecosystem-diagram{
+  margin:2rem 0;
+}
+
+.ecosystem-diagram img{
+  display:block;
+  width:100%;
+  max-width:1100px;
+  height:auto;
+  margin-inline:auto;
+  border-radius:1rem;
+}
+
+.ecosystem-diagram figcaption{
+  margin-top:.75rem;
+  max-width:75ch;
+  margin-inline:auto;
+  color:var(--muted);
+  font-size:.95rem;
+  text-align:center;
+}
