@@ -18,16 +18,13 @@
       content="Learn Without Limits CIC provides practical, parent-led support for families navigating Additional Learning Needs in Wales, including ALN rights, IDPs, EOTAS, EBSA, EHE and inclusion."
     />
 
-    <!-- SEO: CANONICAL ENGLISH HOMEPAGE -->
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="canonical" href="https://learnwithoutlimitscic.org/index.en.html" />
 
-    <!-- hreflang pairing -->
     <link rel="alternate" hreflang="en" href="https://learnwithoutlimitscic.org/index.en.html" />
     <link rel="alternate" hreflang="cy" href="https://learnwithoutlimitscic.org/index.cy.html" />
     <link rel="alternate" hreflang="x-default" href="https://learnwithoutlimitscic.org/index.en.html" />
 
-    <!-- Social sharing -->
     <meta property="og:site_name" content="Learn Without Limits CIC" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="ALN Support for Families in Wales | Learn Without Limits CIC" />
@@ -41,9 +38,9 @@
 
     <link rel="preload" href="/assets/css/styles.css" as="style" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="icon" href="/assets/img/favicon.ico" />
+    <link rel="icon" type="image/png" href="/assets/img/LearnWithoutLimits_Badge.png" />
+    <link rel="apple-touch-icon" href="/assets/img/LearnWithoutLimits_Badge.png" />
 
-    <!-- Page-only layout stabilisers (scoped; no site-wide impact) -->
     <style>
       body.page-home .hero-inner,
       body.page-home .content,
@@ -56,7 +53,6 @@
         overflow-x: hidden;
       }
 
-      /* HERO: keep text dominant and reduce image weight */
       body.page-home .hero-inner {
         display: grid;
         grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
@@ -88,7 +84,6 @@
         font-size: 0.98rem;
       }
 
-      /* Reduce hero image dominance */
       body.page-home .hero-media {
         display: flex;
         justify-content: center;
@@ -114,7 +109,6 @@
         }
       }
 
-      /* Cards grid */
       body.page-home .grid.two {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -175,7 +169,6 @@
       }
     </style>
 
-    <!-- Privacy-friendly analytics -->
     <script async src="https://plausible.io/js/pa-gaby38fWeDduCw6Ude0EX.js"></script>
     <script>
       window.plausible =
@@ -185,7 +178,6 @@
         };
     </script>
 
-    <!-- Structured data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -216,7 +208,7 @@
             },
             "about": {
               "@type": "Thing",
-              "name": "Additional Learning Needs (ALN) support in Wales"
+              "name": "Additional Learning Needs support in Wales"
             },
             "inLanguage": "en"
           }
@@ -228,7 +220,6 @@
   <body class="page-home">
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- HEADER -->
     <header class="site-header" role="banner">
       <div class="brand">
         <img
@@ -253,9 +244,11 @@
         <ul>
           <li><a href="/index.en.html" aria-current="page">Home</a></li>
           <li><a href="/about.en.html">About</a></li>
-          <li><a href="/app.en.html">Parent Guide App</a></li>
+          <li><a href="/app.en.html">App Prototype</a></li>
+          <li><a href="/bridge.en.html">Bridge</a></li>
           <li><a href="/events.en.html">Events</a></li>
           <li><a href="/contact.en.html">Contact</a></li>
+          <li><a href="/support.en.html">Support</a></li>
           <li><a href="https://blog.learnwithoutlimitscic.org/">Blog</a></li>
         </ul>
       </nav>
@@ -265,7 +258,6 @@
       </nav>
     </header>
 
-    <!-- ACCESSIBILITY CONTROLS -->
     <div class="a11y-controls" role="region" aria-label="Accessibility controls">
       <button class="btn" data-action="tts" type="button">Read this page</button>
       <button class="btn" data-action="fontsize" type="button">Text size</button>
@@ -274,18 +266,21 @@
     </div>
 
     <main id="main" tabindex="-1">
-      <!-- HERO -->
       <section class="hero" aria-labelledby="home-title">
         <div class="hero-inner">
           <div class="hero-copy">
             <h1 id="home-title">Practical ALN support for families in Wales</h1>
 
             <p class="lead">
-              Learn Without Limits CIC is a parent-led organisation providing clear, practical support for families navigating Additional Learning Needs (ALN) in Wales. We help families understand ALN rights, IDPs, EOTAS, EBSA, EHE, school difficulties, and college transition pathways.
+              Learn Without Limits CIC is a parent-led organisation providing clear, practical support for families navigating Additional Learning Needs in Wales. We help families understand ALN rights, IDPs, EOTAS, EBSA, EHE, school difficulties, and college transition pathways.
             </p>
 
             <p class="small-note">
               Parent-led • Wales-wide • Practical guidance • Bilingual access
+            </p>
+
+            <p class="small-note">
+              Our live Prevent layer is currently delivered through the Blog and parent community, with the App Prototype being developed as future digital infrastructure.
             </p>
 
             <div class="hero-actions" aria-label="Quick actions">
@@ -313,19 +308,18 @@
         </div>
       </section>
 
-      <!-- MODEL -->
       <section class="content" aria-labelledby="model-title">
         <div class="card">
           <h2 id="model-title">Our Prevent → Bridge → Progress model</h2>
 
           <p>
-            We support families earlier, before problems escalate. Our approach focuses on preventing avoidable crisis, supporting re-engagement where education begins to break down, and enabling progression into education, training and employment.
+            We support families earlier, before problems escalate. Our approach focuses on preventing avoidable crisis, supporting re-engagement where education begins to break down, and enabling progression through onward handover into education, training, and employment.
           </p>
 
           <div class="model-visual">
             <img
               src="/assets/img/prevent_bridge_progress.webp"
-              alt="Prevent Bridge Progress model showing early intervention, bridging pathways and progression into education, training and employment for ALN families in Wales"
+              alt="Prevent Bridge Progress model showing early intervention, bridging pathways, and onward progression for ALN families in Wales"
               width="1024"
               height="1536"
               loading="lazy"
@@ -334,7 +328,11 @@
           </div>
 
           <p style="margin-top: 1rem;">
-            This model shows how early guidance reduces escalation, supports families through periods where education begins to break down, and enables progression into education, training and employment.
+            This model shows how early guidance reduces escalation, supports families through periods where education begins to break down, and then helps prepare for clearer onward handover.
+          </p>
+
+          <p style="margin-top: 1rem;">
+            Progress itself is usually delivered by schools, colleges, training providers, employers, and statutory services. Learn Without Limits helps families engage earlier, more clearly, and more effectively before handover.
           </p>
 
           <p style="margin-top: 1rem;">
@@ -345,7 +343,6 @@
         </div>
       </section>
 
-      <!-- WHAT WE DO / START HERE -->
       <section class="content" aria-labelledby="offer-title">
         <div class="grid two">
           <div class="card">
@@ -383,19 +380,19 @@
               />
               <h2>Start here</h2>
               <p>
-                If you are feeling overwhelmed, start with the pages families use most often. These sections are designed to help you understand your situation, your options, and practical next steps.
+                If you are feeling overwhelmed, start with the parts of our support model that are live now or developing next.
               </p>
               <ul>
-                <li><a href="/about.en.html">Learn about our approach</a></li>
+                <li><a href="https://blog.learnwithoutlimitscic.org/">Read practical guidance on the Blog</a></li>
+                <li><a href="/bridge.en.html">Explore Bridge if education is beginning to break down</a></li>
+                <li><a href="/app.en.html">See the App Prototype and future digital direction</a></li>
                 <li><a href="/events.en.html">See upcoming events and workshops</a></li>
-                <li><a href="https://blog.learnwithoutlimitscic.org/">Read practical guidance on the blog</a></li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- WHO WE SUPPORT -->
       <section class="content" aria-labelledby="who-title">
         <div class="card">
           <h2 id="who-title">Who we support</h2>
@@ -412,7 +409,6 @@
         </div>
       </section>
 
-      <!-- WHY WE EXIST -->
       <section class="content" aria-labelledby="why-title">
         <div class="card">
           <h2 id="why-title">Why Learn Without Limits exists</h2>
@@ -428,20 +424,18 @@
         </div>
       </section>
 
-      <!-- BLOG -->
       <section class="content" aria-labelledby="blog-title">
         <div class="card">
-          <h2 id="blog-title">From the blog</h2>
+          <h2 id="blog-title">From the Blog</h2>
           <p>
-            Our blog shares in-depth guidance and lived-experience insights for ALN families in Wales, linked to our events, tools, and community support.
+            Our Blog is currently the strongest live part of our Prevent layer, alongside our parent community. It shares in-depth guidance and lived-experience insight for ALN families in Wales.
           </p>
           <a class="btn ghost" href="https://blog.learnwithoutlimitscic.org/">
-            Read the blog
+            Read the Blog
           </a>
         </div>
       </section>
 
-      <!-- FINAL CTA -->
       <section class="content" aria-labelledby="next-step-title">
         <div class="card">
           <h2 id="next-step-title">Not sure what to do next?</h2>
@@ -449,6 +443,7 @@
           <ul>
             <li><a href="https://blog.learnwithoutlimitscic.org/">Read practical guidance for your situation</a></li>
             <li><a href="/events.en.html">See upcoming events to understand your options</a></li>
+            <li><a href="/bridge.en.html">Explore Bridge if your child’s education is beginning to break down</a></li>
             <li>
               <a
                 href="https://www.facebook.com/groups/learnwithoutlimitscic"
@@ -459,12 +454,11 @@
               </a>
             </li>
           </ul>
-          <p>You do not have to figure this out alone — start with one step.</p>
+          <p>You do not have to figure this out alone. Start with one step.</p>
         </div>
       </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer" role="contentinfo">
       <div class="footer-grid">
         <div>
@@ -490,7 +484,8 @@
         <div>
           <h3>Quick links</h3>
           <ul>
-            <li><a href="/app.en.html">Parent Guide App</a></li>
+            <li><a href="/app.en.html">App Prototype</a></li>
+            <li><a href="/bridge.en.html">Bridge</a></li>
             <li><a href="/events.en.html">Events</a></li>
             <li><a href="/about.en.html">About</a></li>
             <li><a href="/privacy.en.html">Privacy</a></li>
@@ -511,7 +506,6 @@
     </footer>
 
     <script>
-      // Remember language choice when user switches from EN page
       (function () {
         try {
           document.querySelector(".lang-switch a")?.addEventListener("click", function () {
