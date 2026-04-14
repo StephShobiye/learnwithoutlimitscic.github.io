@@ -1,1 +1,14 @@
-Copyright (c) 2025 Learn Without Limits CIC. All rights reserved.
+Copyright (c) 2026 Golau Insight Ltd. All rights reserved.
+
+This repository and its contents are proprietary.
+
+No part of this codebase, content, or associated materials may be copied, modified, distributed, sublicensed, or used in any form without the prior written permission of Golau Insight Ltd, except as permitted by law.
+
+This repository is made available for transparency and controlled collaboration purposes only. No licence is granted by default through access to this repository.
+
+Learn Without Limits CIC is authorised to use this codebase under a separate licence agreement for the purposes of delivering public benefit services.
+
+No third party is granted any right to use or replicate this system.
+
+For permissions, contact:
+steph.shobiye@learnwithoutlimitscic.org
