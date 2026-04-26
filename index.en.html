@@ -162,6 +162,18 @@
         max-width: 100%;
       }
 
+      body.page-home .connect-section {
+        width: min(100% - 2rem, 1180px);
+        max-width: 1180px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      body.page-home .connect-section .card {
+        width: 100%;
+        max-width: none;
+      }
+
       body.page-home .connect-grid {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -190,10 +202,12 @@
         overflow: hidden;
         box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.08);
         height: 100%;
+        min-width: 0;
       }
 
       body.page-home .connect-card img {
         width: 100%;
+        height: auto;
         aspect-ratio: 4 / 3;
         object-fit: cover;
         display: block;
@@ -522,7 +536,7 @@
         </div>
       </section>
 
-      <section class="content" aria-labelledby="connect-title">
+      <section class="content connect-section" aria-labelledby="connect-title">
         <div class="card">
           <h2 id="connect-title">Ways to connect with Learn Without Limits</h2>
 
