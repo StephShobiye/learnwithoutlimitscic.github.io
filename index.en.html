@@ -42,6 +42,10 @@
     <link rel="apple-touch-icon" href="/assets/img/LearnWithoutLimits_Badge.png" />
 
     <style>
+      body.page-home {
+        overflow-x: hidden;
+      }
+
       body.page-home .hero-inner,
       body.page-home .content,
       body.page-home .site-header,
@@ -49,39 +53,68 @@
         width: 100%;
       }
 
-      body.page-home {
-        overflow-x: hidden;
+      body.page-home .hero {
+        padding: clamp(2rem, 5vw, 4rem) 1rem;
+        background:
+          radial-gradient(circle at top left, rgba(47, 127, 122, 0.16), transparent 34rem),
+          linear-gradient(135deg, #f5fbfb 0%, #fff8ed 100%);
       }
 
       body.page-home .hero-inner {
+        width: min(100% - 2rem, 1180px);
+        max-width: 1180px;
+        margin: 0 auto;
         display: grid;
-        grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
-        gap: clamp(1rem, 2vw, 2rem);
+        grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+        gap: clamp(1.5rem, 4vw, 3rem);
         align-items: center;
-      }
-
-      @media (max-width: 900px) {
-        body.page-home .hero-inner {
-          grid-template-columns: 1fr;
-        }
-
-        body.page-home .hero-media {
-          order: 2;
-          justify-content: flex-start;
-        }
-
-        body.page-home .hero-copy {
-          order: 1;
-        }
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(47, 127, 122, 0.16);
+        border-radius: 1.4rem;
+        padding: clamp(1.25rem, 4vw, 3rem);
+        box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.08);
       }
 
       body.page-home .hero-copy {
-        max-width: 70ch;
+        max-width: 68ch;
+      }
+
+      body.page-home .hero-copy h1 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: clamp(2.2rem, 5vw, 4.25rem);
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+      }
+
+      body.page-home .hero-copy .lead {
+        font-size: clamp(1.1rem, 2vw, 1.35rem);
+        line-height: 1.6;
+        margin-bottom: 1rem;
       }
 
       body.page-home .hero-copy .small-note {
         margin-top: 1rem;
-        font-size: 0.98rem;
+        font-size: 1rem;
+      }
+
+      body.page-home .hero-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-bottom: 1rem;
+        padding: 0.4rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(47, 127, 122, 0.12);
+        color: #1f5f5b;
+        font-weight: 700;
+      }
+
+      body.page-home .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1.4rem;
       }
 
       body.page-home .hero-media {
@@ -90,22 +123,35 @@
         align-items: center;
       }
 
+      body.page-home .hero-media-frame {
+        width: min(100%, 420px);
+        padding: 0.75rem;
+        border-radius: 1.2rem;
+        background: #ffffff;
+        box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.12);
+        transform: rotate(1deg);
+      }
+
       body.page-home .hero-media img {
         width: 100%;
         height: auto;
-        max-width: 360px;
+        max-width: 100%;
         display: block;
-      }
-
-      @media (max-width: 1200px) {
-        body.page-home .hero-media img {
-          max-width: 320px;
-        }
+        border-radius: 0.9rem;
       }
 
       @media (max-width: 900px) {
-        body.page-home .hero-media img {
-          max-width: 280px;
+        body.page-home .hero-inner {
+          grid-template-columns: 1fr;
+        }
+
+        body.page-home .hero-media {
+          justify-content: flex-start;
+        }
+
+        body.page-home .hero-media-frame {
+          max-width: 320px;
+          transform: none;
         }
       }
 
@@ -113,13 +159,19 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: clamp(1rem, 2vw, 2rem);
-        align-items: start;
+        align-items: stretch;
       }
 
       @media (max-width: 900px) {
         body.page-home .grid.two {
           grid-template-columns: 1fr;
         }
+      }
+
+      body.page-home .card-body {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
       }
 
       body.page-home .card-body img {
@@ -138,28 +190,9 @@
         }
       }
 
-      body.page-home .card-body {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-      }
-
-      body.page-home .hero-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-      }
-
-      body.page-home .model-visual {
-        margin-top: 1.25rem;
-      }
-
-      body.page-home .model-visual img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 0.75rem;
-        max-width: 100%;
+      body.page-home .start-card {
+        border-color: rgba(47, 127, 122, 0.28);
+        background: linear-gradient(180deg, #ffffff 0%, #f5fbfb 100%);
       }
 
       body.page-home .connect-section {
@@ -234,6 +267,83 @@
       body.page-home .connect-card .btn {
         align-self: flex-start;
         margin-top: 0.25rem;
+      }
+
+      body.page-home .model-card {
+        background: linear-gradient(180deg, #ffffff 0%, #fbfff9 100%);
+      }
+
+      body.page-home .model-visual {
+        margin-top: 1.25rem;
+      }
+
+      body.page-home .model-visual img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 0.75rem;
+        max-width: 100%;
+        background: #ffffff;
+      }
+
+      body.page-home .soft-callout {
+        border-left: 0.35rem solid #2f7f7a;
+        padding: 1rem;
+        background: rgba(47, 127, 122, 0.08);
+        border-radius: 0.75rem;
+      }
+
+      body.page-home .site-footer {
+        margin-top: 3rem;
+        padding: clamp(2rem, 4vw, 3rem) 1rem;
+        background:
+          radial-gradient(circle at top right, rgba(47, 127, 122, 0.14), transparent 28rem),
+          #f5f7f4;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      body.page-home .footer-grid {
+        width: min(100% - 2rem, 1180px);
+        max-width: 1180px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: clamp(1.25rem, 3vw, 2.5rem);
+        align-items: start;
+      }
+
+      body.page-home .site-footer h3 {
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        color: #1f5f5b;
+      }
+
+      body.page-home .site-footer ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        display: grid;
+        gap: 0.45rem;
+      }
+
+      body.page-home .site-footer .note {
+        margin-top: 0;
+      }
+
+      body.page-home .site-footer .small {
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 900px) {
+        body.page-home .footer-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 600px) {
+        body.page-home .footer-grid {
+          grid-template-columns: 1fr;
+        }
       }
 
       body.page-home a:focus-visible,
@@ -345,45 +455,47 @@
       <section class="hero" aria-labelledby="home-title">
         <div class="hero-inner">
           <div class="hero-copy">
+            <p class="hero-kicker">Parent-led support in Wales</p>
+
             <h1 id="home-title">Practical ALN support for families in Wales</h1>
 
             <p class="lead">
-              Learn Without Limits CIC is a parent-led organisation providing clear, practical support for families navigating Additional Learning Needs in Wales. We help families understand ALN rights, IDPs, EOTAS, EBSA, EHE, school difficulties, and college transition pathways.
+              Clear, parent-led guidance for families navigating ALN rights, IDPs, EOTAS, attendance pressure, school breakdown, home education and post-16 transitions.
             </p>
 
             <p class="small-note">
-              We are building a navigation layer between policy design and real-world delivery, helping families and services identify issues earlier and move more effectively through complex systems.
+              Start with practical guidance, join the parent community, or explore our developing Bridge pathway for re-engagement and progression.
             </p>
 
             <p class="small-note">
-              Parent-led • Wales-wide • Practical guidance • Bilingual access
-            </p>
-
-            <p class="small-note">
-              Our live Prevent layer is currently delivered through the Blog and parent community, with the App Prototype being developed as future digital infrastructure.
+              Wales-wide • Practical guidance • Community insight • Bilingual access
             </p>
 
             <div class="hero-actions" aria-label="Quick actions">
+              <a class="btn primary" href="#start-here">Start here</a>
+              <a class="btn ghost" href="https://blog.learnwithoutlimitscic.org/">Read the Blog</a>
               <a
-                class="btn primary"
-                href="https://blog.learnwithoutlimitscic.org/2026/03/18/prevention-bridging-progression-aln/"
+                class="btn ghost"
+                href="https://www.facebook.com/groups/learnwithoutlimitscic"
+                target="_blank"
+                rel="noopener"
               >
-                Prevent → Bridge → Progress model
+                Join the community
               </a>
-              <a class="btn ghost" href="/events.en.html">See upcoming events</a>
-              <a class="btn ghost" href="https://blog.learnwithoutlimitscic.org/">Read the blog</a>
             </div>
           </div>
 
           <div class="hero-media">
-            <img
-              src="/assets/img/boy_on_dragon.webp"
-              alt="Child riding a red dragon beneath a rainbow"
-              width="1024"
-              height="1536"
-              loading="eager"
-              decoding="async"
-            />
+            <div class="hero-media-frame">
+              <img
+                src="/assets/img/boy_on_dragon.webp"
+                alt="Child riding a red dragon beneath a rainbow"
+                width="1024"
+                height="1536"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -393,8 +505,8 @@
           <div class="card">
             <div class="card-body">
               <img
-                src="/assets/img/home-peer-left.jpg"
-                alt="Parent peer support and guidance"
+                src="/assets/img/home-what-we-do.webp"
+                alt="Two people reviewing a bilingual support planning document together over coffee"
                 width="1200"
                 height="675"
                 loading="lazy"
@@ -413,11 +525,11 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card start-card" id="start-here">
             <div class="card-body">
               <img
-                src="/assets/img/home-peer-right.jpg"
-                alt="Clear next steps for families navigating ALN systems"
+                src="/assets/img/home-start-here.webp"
+                alt="Parent using a phone to look for support while a child works in the background"
                 width="1200"
                 height="675"
                 loading="lazy"
@@ -425,7 +537,7 @@
               />
               <h2>Start here</h2>
               <p>
-                If you are feeling overwhelmed, start with the parts of our support model that are live now or developing next.
+                If you are feeling overwhelmed, begin with one practical route. You do not need to understand the whole system before taking the next step.
               </p>
               <ul>
                 <li><a href="https://blog.learnwithoutlimitscic.org/">Read practical guidance on the Blog</a></li>
@@ -562,31 +674,29 @@
       </section>
 
       <section class="content" aria-labelledby="model-title">
-        <div class="card">
+        <div class="card model-card">
           <h2 id="model-title">Our Prevent → Bridge → Progress model</h2>
 
           <p>
-            We support families earlier, before problems escalate. Our approach focuses on preventing avoidable crisis, supporting re-engagement where education begins to break down, and enabling progression through onward handover into education, training, and employment.
+            We help families earlier, support re-engagement when education begins to break down, and prepare for clearer onward progression.
           </p>
 
           <div class="model-visual">
             <img
-              src="/assets/img/prevent_bridge_progress.webp"
-              alt="Prevent Bridge Progress model showing early intervention, bridging pathways, and onward progression for ALN families in Wales"
-              width="1024"
-              height="1536"
+              src="/assets/img/home-prevent-bridge-progress.webp"
+              alt="Prevent Bridge Progress model showing earlier support, bridging options and future progression for families navigating ALN in Wales"
+              width="1400"
+              height="840"
               loading="lazy"
               decoding="async"
             />
           </div>
 
-          <p style="margin-top: 1rem;">
-            This model shows how early guidance reduces escalation, supports families through periods where education begins to break down, and then helps prepare for clearer onward handover.
-          </p>
-
-          <p style="margin-top: 1rem;">
-            Progress itself is usually delivered by schools, colleges, training providers, employers, and statutory services. Learn Without Limits helps families engage earlier, more clearly, and more effectively before handover.
-          </p>
+          <div class="soft-callout">
+            <p>
+              Progress itself is usually delivered by schools, colleges, training providers, employers, and statutory services. Learn Without Limits helps families engage earlier, more clearly, and more effectively before handover.
+            </p>
+          </div>
 
           <p style="margin-top: 1rem;">
             <a href="https://blog.learnwithoutlimitscic.org/2026/03/18/prevention-bridging-progression-aln/">
@@ -647,8 +757,9 @@
         </div>
 
         <div>
-          <h3>Quick links</h3>
+          <h3>Explore</h3>
           <ul>
+            <li><a href="https://blog.learnwithoutlimitscic.org/">Blog</a></li>
             <li><a href="/app.en.html">App Prototype</a></li>
             <li><a href="/bridge.en.html">Bridge</a></li>
             <li><a href="/events.en.html">Events</a></li>
@@ -658,7 +769,7 @@
         </div>
 
         <div>
-          <h3>Connect with us</h3>
+          <h3>Connect</h3>
           <ul>
             <li>
               <a
@@ -691,7 +802,7 @@
         </div>
 
         <div>
-          <h3>Note</h3>
+          <h3>Important</h3>
           <p class="note">
             © <span id="year"></span> Learn Without Limits CIC. All rights reserved.
           </p>
