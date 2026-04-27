@@ -155,6 +155,17 @@
         }
       }
 
+      body.page-home .feature-section {
+        width: min(100% - 2rem, 1040px);
+        max-width: 1040px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      body.page-home .feature-section .card {
+        max-width: none;
+      }
+
       body.page-home .grid.two {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -269,6 +280,17 @@
         margin-top: 0.25rem;
       }
 
+      body.page-home .model-section {
+        width: min(100% - 2rem, 1080px);
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      body.page-home .model-section .card {
+        max-width: none;
+      }
+
       body.page-home .model-card {
         background: linear-gradient(180deg, #ffffff 0%, #fbfff9 100%);
       }
@@ -282,7 +304,9 @@
         height: auto;
         display: block;
         border-radius: 0.75rem;
-        max-width: 100%;
+        max-width: 980px;
+        margin-left: auto;
+        margin-right: auto;
         background: #ffffff;
       }
 
@@ -291,6 +315,17 @@
         padding: 1rem;
         background: rgba(47, 127, 122, 0.08);
         border-radius: 0.75rem;
+      }
+
+      body.page-home .callout-card {
+        background:
+          radial-gradient(circle at top right, rgba(47, 127, 122, 0.1), transparent 18rem),
+          linear-gradient(180deg, #ffffff 0%, #f8fbfa 100%);
+        border-color: rgba(47, 127, 122, 0.18);
+      }
+
+      body.page-home .callout-card h2 {
+        color: #164f4b;
       }
 
       body.page-home .site-footer {
@@ -500,7 +535,7 @@
         </div>
       </section>
 
-      <section class="content" aria-labelledby="offer-title">
+      <section class="content feature-section" aria-labelledby="offer-title">
         <div class="grid two">
           <div class="card">
             <div class="card-body">
@@ -673,7 +708,7 @@
         </div>
       </section>
 
-      <section class="content" aria-labelledby="model-title">
+      <section class="content model-section" aria-labelledby="model-title">
         <div class="card model-card">
           <h2 id="model-title">Our Prevent → Bridge → Progress model</h2>
 
@@ -707,7 +742,7 @@
       </section>
 
       <section class="content" aria-labelledby="why-title">
-        <div class="card">
+        <div class="card callout-card">
           <h2 id="why-title">Why Learn Without Limits exists</h2>
           <p>
             Too often, families only receive clear support after a child has reached crisis point.
@@ -722,7 +757,7 @@
       </section>
 
       <section class="content" aria-labelledby="blog-title">
-        <div class="card">
+        <div class="card callout-card">
           <h2 id="blog-title">From the Blog</h2>
           <p>
             Our Blog is currently the strongest live part of our Prevent layer, alongside our parent community. It shares in-depth guidance and lived-experience insight for ALN families in Wales.
@@ -795,7 +830,7 @@
                 target="_blank"
                 rel="noopener"
               >
-                X
+                Follow us on X
               </a>
             </li>
           </ul>
