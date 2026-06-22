@@ -3,9 +3,10 @@
   <head>
     <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="theme-color" content="#1b73e8" />
+
     <script>
       if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/sw.js");
+        navigator.serviceWorker.register("/sw.js").catch(function () {});
       }
     </script>
 
@@ -15,23 +16,23 @@
     <title>Learn Without Limits CIC | Choose language</title>
     <meta
       name="description"
-      content="Choose your language to visit Learn Without Limits CIC."
+      content="Choose your language to visit Learn Without Limits CIC, a Wales-based parent-led organisation supporting families navigating Additional Learning Needs."
     />
 
     <!-- SEO -->
-    <meta name="robots" content="noindex,follow,max-image-preview:large" />
-    <link rel="canonical" href="https://learnwithoutlimitscic.org/index.en.html" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://learnwithoutlimitscic.org/" />
 
     <link rel="alternate" hreflang="en" href="https://learnwithoutlimitscic.org/index.en.html" />
     <link rel="alternate" hreflang="cy" href="https://learnwithoutlimitscic.org/index.cy.html" />
-    <link rel="alternate" hreflang="x-default" href="https://learnwithoutlimitscic.org/index.en.html" />
+    <link rel="alternate" hreflang="x-default" href="https://learnwithoutlimitscic.org/" />
 
     <!-- Social -->
     <meta property="og:site_name" content="Learn Without Limits CIC" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Learn Without Limits CIC | Parent-led ALN support in Wales" />
-    <meta property="og:description" content="Parent-led support for ALN families in Wales. Clear, practical guidance on ALN, IDPs, EOTAS, EBSA, EHE and inclusion." />
-    <meta property="og:url" content="https://learnwithoutlimitscic.org/index.en.html" />
+    <meta property="og:title" content="Learn Without Limits CIC | Choose language" />
+    <meta property="og:description" content="Parent-led support for ALN families in Wales. Choose English or Cymraeg to continue." />
+    <meta property="og:url" content="https://learnwithoutlimitscic.org/" />
     <meta property="og:image" content="https://learnwithoutlimitscic.org/assets/img/home-dragon-centre.png" />
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -65,8 +66,6 @@
         margin-top: 1rem;
       }
 
-      /* Welcome grid */
-
       .lang-welcome {
         margin-top: 1.5rem;
         display: grid;
@@ -84,7 +83,6 @@
       }
 
       @media (min-width: 48rem) {
-
         .lang-welcome {
           grid-template-columns: 1fr 1fr;
         }
@@ -93,7 +91,6 @@
           border-left: 1px solid rgba(255,255,255,0.08);
           padding-left: 1.25rem;
         }
-
       }
 
       a:focus-visible,
@@ -101,27 +98,101 @@
         outline: 3px solid currentColor;
         outline-offset: 3px;
       }
-
     </style>
 
     <!-- Privacy-friendly analytics -->
     <script async src="https://plausible.io/js/pa-gaby38fWeDduCw6Ude0EX.js"></script>
     <script>
       window.plausible = window.plausible || function () {
-        (window.plausible.q = window.plausible.q || []).push(arguments)
-      }
+        (window.plausible.q = window.plausible.q || []).push(arguments);
+      };
     </script>
 
+    <!-- Schema Ecosystem Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "NGO",
+          "@id": "https://learnwithoutlimitscic.org/#organisation",
+          "name": "Learn Without Limits CIC",
+          "alternateName": "Learn Without Limits",
+          "description": "A Wales-based, parent-led Community Interest Company and civic tech initiative supporting children, young people, and families navigating Additional Learning Needs (ALN).",
+          "url": "https://learnwithoutlimitscic.org/",
+          "logo": "https://learnwithoutlimitscic.org/assets/img/LearnWithoutLimits_Badge.png",
+          "email": "support@learnwithoutlimitscic.org",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Wales",
+            "addressCountry": "GB"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Wales"
+          },
+          "knowsAbout": [
+            "Additional Learning Needs",
+            "ALN",
+            "Individual Development Plans",
+            "IDPs",
+            "Education Otherwise Than At School",
+            "EOTAS",
+            "Elective Home Education",
+            "Parent carer support",
+            "Digital navigation",
+            "Civic technology",
+            "Prevent, Bridge and Progress"
+          ],
+          "sameAs": [
+            "https://blog.learnwithoutlimitscic.org/",
+            "https://www.facebook.com/profile.php?id=61583910420875",
+            "https://www.facebook.com/groups/learnwithoutlimitscic",
+            "https://x.com/LWLCIC",
+            "https://www.eventbrite.com/cc/learn-without-limits-cic-events-briefings-4818077"
+          ],
+          "hasPart": [
+            {
+              "@type": "WebSite",
+              "@id": "https://blog.learnwithoutlimitscic.org/#website",
+              "name": "Learn Without Limits CIC Blog",
+              "url": "https://blog.learnwithoutlimitscic.org/",
+              "description": "The public information and learning layer of Learn Without Limits CIC."
+            },
+            {
+              "@type": "SoftwareApplication",
+              "@id": "https://learnwithoutlimitscic.org/app.en.html#app-prototype",
+              "name": "Learn Without Limits Parent Guide App Prototype",
+              "url": "https://learnwithoutlimitscic.org/app.en.html",
+              "sameAs": "https://StephShobiye.github.io/aln-parent-guide-app/",
+              "applicationCategory": "EducationalApplication",
+              "operatingSystem": "Web browser",
+              "softwareVersion": "Proof-of-concept prototype",
+              "isAccessibleForFree": true,
+              "description": "An early HTML proof-of-concept prototype testing whether community insight can become usable digital navigation for families in Wales."
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://learnwithoutlimitscic.org/#website",
+          "name": "Learn Without Limits CIC",
+          "url": "https://learnwithoutlimitscic.org/",
+          "publisher": {
+            "@id": "https://learnwithoutlimitscic.org/#organisation"
+          },
+          "inLanguage": ["en-GB", "cy-GB"]
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body class="page-lang">
-
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header" role="banner">
-
       <div class="brand">
-
         <img
           src="/assets/img/LearnWithoutLimits_Badge.png"
           alt="Learn Without Limits CIC badge logo with Welsh dragon"
@@ -135,67 +206,57 @@
           <span class="brand-title">Learn Without Limits CIC</span>
           <span class="brand-tag">Parent-led support for ALN families in Wales.</span>
         </div>
-
       </div>
-
     </header>
 
-
     <main id="main" tabindex="-1" class="lang-wrap">
-
       <section class="lang-card" aria-labelledby="lang-title">
-
         <h1 id="lang-title">Choose your language</h1>
 
-<p class="lead">
-  Learn Without Limits CIC is a parent-led organisation supporting families navigating Additional Learning Needs (ALN) in Wales.
-</p>
+        <p class="lead">
+          Learn Without Limits CIC is a parent-led organisation supporting families navigating Additional Learning Needs (ALN) in Wales.
+        </p>
 
-<p class="small-note">
-  Supporting families across Wales since 2013, we provide practical guidance, community insight, and clear navigation pathways through complex systems.
-</p>
+        <p class="small-note">
+          Supporting families across Wales since 2013, we provide practical guidance, community insight, and clear navigation pathways through complex systems.
+        </p>
 
-<p class="small-note">
-  If you are unsure where to start, you are in the right place.
-</p>
-        
+        <p class="small-note">
+          If you are unsure where to start, you are in the right place.
+        </p>
+
         <p class="lead" lang="cy">
-  Dewiswch Gymraeg neu English i barhau.
-</p>
+          Dewiswch Gymraeg neu English i barhau.
+        </p>
 
-<p class="lead" lang="en">
-  Please select your language to continue.
-</p>
+        <p class="lead" lang="en">
+          Please select your language to continue.
+        </p>
 
-      <h2 class="small-heading">Select language / Dewis iaith</h2>
+        <h2 class="small-heading">Select language / Dewis iaith</h2>
 
-<div class="lang-actions" aria-label="Language options">
-
-          <a class="btn primary"
-             href="/index.en.html"
-             lang="en"
-             hreflang="en"
-             data-lang="en">
-             English
+        <div class="lang-actions" aria-label="Language options">
+          <a
+            class="btn primary"
+            href="/index.en.html"
+            lang="en"
+            hreflang="en"
+            data-lang="en">
+            English
           </a>
 
-          <a class="btn ghost"
-             href="/index.cy.html"
-             lang="cy"
-             hreflang="cy"
-             data-lang="cy">
-             Cymraeg
+          <a
+            class="btn ghost"
+            href="/index.cy.html"
+            lang="cy"
+            hreflang="cy"
+            data-lang="cy">
+            Cymraeg
           </a>
-
         </div>
 
-
-        <!-- Welsh welcome panel -->
-
         <div class="lang-welcome" aria-label="Welsh language welcome">
-
           <div class="lang-welcome-col" lang="en">
-
             <h2>Welsh-speaking parents and carers</h2>
 
             <p>
@@ -204,12 +265,9 @@
               and would especially welcome connections with Welsh speakers who want to help us
               improve access for families.
             </p>
-
           </div>
 
-
           <div class="lang-welcome-col" lang="cy">
-
             <h2>Rhieni a gofalwyr Cymraeg eu hiaith</h2>
 
             <p>
@@ -218,47 +276,39 @@
               ac yn croesawu cysylltiadau gyda siaradwyr Cymraeg sy’n awyddus i helpu i wella
               mynediad i deuluoedd.
             </p>
-
           </div>
-
         </div>
-
 
         <p class="note small" style="margin-top:1rem;">
           Tip: we’ll remember your choice on this device.
         </p>
-
       </section>
 
-<section class="content">
-  <div class="card callout-card">
-    <h2>What’s happening now</h2>
-<p><strong>Learn Without Limits CIC is already delivering support across Wales without core funding.</strong></p>
-    <ul>
-      <li>Regular online parent support sessions running across Wales</li>
-      <li>Cross-sector briefings bringing together education, health and community voices</li>
-      <li>100+ practical guidance articles published for ALN families across Wales</li>
-      <li>Active parent/carer community with around 960 members</li>
-    </ul>
+      <section class="content">
+        <div class="card callout-card">
+          <h2>What’s happening now</h2>
 
-    <p>
-      <a href="/events.en.html">View upcoming events</a> |
-      <a href="https://blog.learnwithoutlimitscic.org/">Read the blog</a>
-    </p>
-  
-  
-  
-  </div>
-</section>
+          <p>
+            <strong>Learn Without Limits CIC is already delivering support across Wales without core funding.</strong>
+          </p>
 
-      
+          <ul>
+            <li>Regular online parent support sessions running across Wales</li>
+            <li>Cross-sector briefings bringing together education, health and community voices</li>
+            <li>100+ practical guidance articles published for ALN families across Wales</li>
+            <li>Active parent/carer community with around 960 members</li>
+          </ul>
+
+          <p>
+            <a href="/events.en.html">View upcoming events</a> |
+            <a href="https://blog.learnwithoutlimitscic.org/">Read the blog</a>
+          </p>
+        </div>
+      </section>
     </main>
 
-
     <footer class="site-footer" role="contentinfo">
-
       <div class="footer-grid">
-
         <div>
           <h3>Contact</h3>
           <ul>
@@ -268,10 +318,11 @@
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/learnwithoutlimitscic"
-                 target="_blank"
-                 rel="noopener">
-                 Facebook group
+              <a
+                href="https://www.facebook.com/groups/learnwithoutlimitscic"
+                target="_blank"
+                rel="noopener">
+                Facebook group
               </a>
             </li>
           </ul>
@@ -282,48 +333,21 @@
           <ul>
             <li><a href="/index.en.html">English homepage</a></li>
             <li><a href="/index.cy.html">Welsh homepage</a></li>
+            <li><a href="/about.en.html">About us</a></li>
+            <li><a href="/support.en.html">Support us</a></li>
             <li><a href="/app.en.html">Parent Guide App</a></li>
+            <li><a href="/bridge.en.html">Bridge</a></li>
             <li><a href="/events.en.html">Events</a></li>
-            <li><a href="/about.en.html">About</a></li>
+            <li><a href="https://blog.learnwithoutlimitscic.org/">Blog</a></li>
           </ul>
         </div>
-
-        <div>
-          <h3>Note</h3>
-          <p class="note">
-            © <span id="year"></span> Learn Without Limits CIC. All rights reserved.
-          </p>
-          <p class="note small">
-            We provide peer support and guidance only. Please seek professional legal
-            or clinical advice when appropriate.
-          </p>
-        </div>
-
       </div>
 
+      <div class="legal">
+        <a href="/privacy.en.html">Privacy &amp; Safeguarding</a>
+        <span aria-hidden="true"> · </span>
+        <span>&copy; 2026 Learn Without Limits CIC</span>
+      </div>
     </footer>
-
-
-    <script>
-
-      document.querySelectorAll("[data-lang]").forEach(function(link){
-
-        link.addEventListener("click", function(){
-
-          try {
-            localStorage.setItem("lwl_lang", link.getAttribute("data-lang"))
-          } catch(e){}
-
-        })
-
-      })
-
-      document.getElementById("year").textContent =
-        new Date().getFullYear()
-
-    </script>
-
-    <script src="/assets/js/site.js" defer></script>
-
   </body>
 </html>
